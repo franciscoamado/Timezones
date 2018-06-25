@@ -16,6 +16,9 @@ class PopOverViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let infoView = TimezoneInfoView()
+        stackView.addView(infoView, in: .top)
     }
 
     override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {

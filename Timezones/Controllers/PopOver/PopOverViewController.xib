@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,12 +14,12 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="746"/>
+        <customView canDrawConcurrently="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="R2L-Rh-KEy">
-                    <rect key="frame" x="0.0" y="706" width="480" height="40"/>
+                    <rect key="frame" x="0.0" y="320" width="480" height="40"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-VW-fkY">
                             <rect key="frame" x="20" y="7" width="30" height="25"/>
@@ -42,44 +42,10 @@
                     </constraints>
                 </customView>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-hJ-cxT">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="706"/>
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                     <subviews>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="0WN-S8-j84">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="706"/>
-                            <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-8T-nts">
-                                    <rect key="frame" x="18" y="668" width="33" height="18"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" title="USA" id="Pz5-bZ-IYi">
-                                        <font key="font" metaFont="system" size="14"/>
-                                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v5A-wu-3hE">
-                                    <rect key="frame" x="323" y="635" width="139" height="29"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" title="HH:MM (+2)" id="8Yp-G1-Jsq">
-                                        <font key="font" metaFont="systemMedium" size="24"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HAJ-ng-Vcv">
-                                    <rect key="frame" x="18" y="635" width="155" height="29"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" title="San Francisco" id="rQV-za-8MZ">
-                                        <font key="font" metaFont="systemMedium" size="24"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="v5A-wu-3hE" secondAttribute="trailing" constant="20" id="DRt-RV-AmJ"/>
-                                <constraint firstItem="b2m-8T-nts" firstAttribute="leading" secondItem="0WN-S8-j84" secondAttribute="leading" constant="20" id="OEQ-ed-VOM"/>
-                                <constraint firstItem="v5A-wu-3hE" firstAttribute="bottom" secondItem="HAJ-ng-Vcv" secondAttribute="bottom" id="PpC-Ih-Egq"/>
-                                <constraint firstItem="HAJ-ng-Vcv" firstAttribute="top" secondItem="b2m-8T-nts" secondAttribute="bottom" constant="4" id="dOl-yG-YQU"/>
-                                <constraint firstItem="b2m-8T-nts" firstAttribute="top" secondItem="0WN-S8-j84" secondAttribute="top" constant="20" id="t4j-Il-AOH"/>
-                                <constraint firstItem="HAJ-ng-Vcv" firstAttribute="leading" secondItem="0WN-S8-j84" secondAttribute="leading" constant="20" id="viE-GQ-uge"/>
-                            </constraints>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="KgU-1T-Xfa" customClass="TimezoneInfoView" customModule="Timezones" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="163" height="320"/>
                         </customView>
                     </subviews>
                     <visibilityPriorities>
@@ -99,7 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="fpV-hJ-cxT" secondAttribute="trailing" id="neT-nz-mFs"/>
                 <constraint firstAttribute="bottom" secondItem="fpV-hJ-cxT" secondAttribute="bottom" id="uAw-bM-KQm"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="94"/>
+            <point key="canvasLocation" x="139" y="-63"/>
         </customView>
     </objects>
     <resources>

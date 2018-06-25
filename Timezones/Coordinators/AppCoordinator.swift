@@ -45,6 +45,16 @@ class AppCoordinator {
             window.center()
             window.makeKeyAndOrderFront(self)
         }
+
+        if let mainViewController = mainWindowController.contentViewController as? MainViewController {
+
+            mainViewController.configure(.init(
+                selectedCountryName: "Portugal",
+                selectedCountryIdentifier: "PT",
+                startAtLogin: false
+                )
+            )
+        }
     }
 }
 

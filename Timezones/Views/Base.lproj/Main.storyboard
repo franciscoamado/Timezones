@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -684,7 +684,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="MainWindowController" id="B8D-0N-5wS" customClass="MainWindowController" customModule="Timezones" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="MainWindowController" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="Timezones" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -725,6 +725,9 @@
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="didSelectStartAtLogin:" target="XfG-lQ-9wD" id="AHx-lR-St1"/>
+                                                        </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Lhn-Yb-wQn">
                                                         <rect key="frame" x="8" y="20" width="344" height="34"/>
@@ -743,6 +746,9 @@
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
+                                                        <connections>
+                                                            <action selector="didPressQuit:" target="XfG-lQ-9wD" id="GfN-27-jvh"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -781,6 +787,9 @@
                                                                 </items>
                                                             </menu>
                                                         </popUpButtonCell>
+                                                        <connections>
+                                                            <action selector="didChangeLocation:" target="XfG-lQ-9wD" id="NTH-Nv-6t1"/>
+                                                        </connections>
                                                     </popUpButton>
                                                 </subviews>
                                                 <constraints>
@@ -839,15 +848,20 @@
                             <constraint firstItem="OBQ-6O-SbL" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="xAr-pJ-HDf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="Fbb-Ex-kqy" id="3cd-m9-ZNe"/>
+                        <outlet property="locationSelectionButton" destination="dN3-yK-3Ft" id="7c0-Mp-yGk"/>
+                        <outlet property="startAtLoginButton" destination="rYK-ed-ig5" id="4mA-O0-kiY"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
-        <!--View Controller-->
+        <!--Timezone Selection View Controller-->
         <scene sceneID="Qys-ed-oDI">
             <objects>
-                <viewController storyboardIdentifier="TimezonesViewController" id="4ns-59-xyr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimezonesViewController" id="4ns-59-xyr" customClass="TimezoneSelectionViewController" customModule="Timezones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="vTx-eV-ur6">
                         <rect key="frame" x="0.0" y="0.0" width="655" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -867,82 +881,43 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-ZQ-NPR">
-                                        <rect key="frame" x="20" y="161" width="615" height="82"/>
+                                        <rect key="frame" x="20" y="243" width="615" height="0.0"/>
+                                    </stackView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZR-hZ-FLe">
+                                        <rect key="frame" x="20" y="199" width="615" height="34"/>
                                         <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="k0m-3t-vdk">
-                                                <rect key="frame" x="0.0" y="42" width="615" height="40"/>
-                                                <subviews>
-                                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1wA-Jn-6y2">
-                                                        <rect key="frame" x="6" y="5" width="604" height="29"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="lqi-CW-nB6"/>
-                                                        </constraints>
-                                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="FY6-KA-Far" id="O2q-dw-vEe">
-                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
-                                                            <menu key="menu" id="ywn-xC-7pO">
-                                                                <items>
-                                                                    <menuItem title="Item 1" state="on" id="FY6-KA-Far"/>
-                                                                    <menuItem title="Item 2" id="rmI-ay-fMY"/>
-                                                                    <menuItem title="Item 3" id="kqD-fQ-9SN"/>
-                                                                </items>
-                                                            </menu>
-                                                        </popUpButtonCell>
-                                                    </popUpButton>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="1wA-Jn-6y2" firstAttribute="leading" secondItem="k0m-3t-vdk" secondAttribute="leading" constant="8" id="1l0-jt-4WG"/>
-                                                    <constraint firstItem="1wA-Jn-6y2" firstAttribute="top" secondItem="k0m-3t-vdk" secondAttribute="top" constant="8" id="3ue-X3-I1o"/>
-                                                    <constraint firstAttribute="bottom" secondItem="1wA-Jn-6y2" secondAttribute="bottom" constant="8" id="ZSy-dd-TGO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="1wA-Jn-6y2" secondAttribute="trailing" constant="8" id="aUi-N2-KhE"/>
-                                                </constraints>
-                                            </customView>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZR-hZ-FLe">
-                                                <rect key="frame" x="0.0" y="0.0" width="615" height="34"/>
-                                                <subviews>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-dF-3pO">
-                                                        <rect key="frame" x="254" y="7" width="107" height="19"/>
-                                                        <buttonCell key="cell" type="roundRect" title="+ Add Timezone" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rcR-DL-OtC">
-                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="cellTitle"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="SWH-dF-3pO" firstAttribute="top" secondItem="cZR-hZ-FLe" secondAttribute="top" constant="8" id="K8f-ls-ajs"/>
-                                                    <constraint firstItem="SWH-dF-3pO" firstAttribute="centerX" secondItem="cZR-hZ-FLe" secondAttribute="centerX" id="RNK-LI-rRO"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SWH-dF-3pO" secondAttribute="trailing" constant="16" id="amb-rN-Nye"/>
-                                                    <constraint firstItem="SWH-dF-3pO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cZR-hZ-FLe" secondAttribute="leading" constant="16" id="gxd-53-mRJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="SWH-dF-3pO" secondAttribute="bottom" constant="8" id="nsY-vB-fNn"/>
-                                                </constraints>
-                                            </customView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-dF-3pO">
+                                                <rect key="frame" x="254" y="7" width="107" height="19"/>
+                                                <buttonCell key="cell" type="roundRect" title="+ Add Timezone" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rcR-DL-OtC">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                    <connections>
+                                                        <action selector="addTimezone:" target="4ns-59-xyr" id="FLf-Nw-Q8b"/>
+                                                    </connections>
+                                                </buttonCell>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="cZR-hZ-FLe" secondAttribute="trailing" id="234-VD-epS"/>
-                                            <constraint firstAttribute="bottom" secondItem="cZR-hZ-FLe" secondAttribute="bottom" id="4Wu-OE-huI"/>
-                                            <constraint firstItem="k0m-3t-vdk" firstAttribute="top" secondItem="ceG-ZQ-NPR" secondAttribute="top" id="Bv8-IG-wb8"/>
-                                            <constraint firstItem="k0m-3t-vdk" firstAttribute="leading" secondItem="ceG-ZQ-NPR" secondAttribute="leading" id="ptK-Rd-UJh"/>
-                                            <constraint firstAttribute="trailing" secondItem="k0m-3t-vdk" secondAttribute="trailing" id="uQz-18-KWx"/>
-                                            <constraint firstItem="cZR-hZ-FLe" firstAttribute="leading" secondItem="ceG-ZQ-NPR" secondAttribute="leading" id="wEo-Pg-Shs"/>
+                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="top" secondItem="cZR-hZ-FLe" secondAttribute="top" constant="8" id="K8f-ls-ajs"/>
+                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="centerX" secondItem="cZR-hZ-FLe" secondAttribute="centerX" id="RNK-LI-rRO"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SWH-dF-3pO" secondAttribute="trailing" constant="16" id="amb-rN-Nye"/>
+                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cZR-hZ-FLe" secondAttribute="leading" constant="16" id="gxd-53-mRJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="SWH-dF-3pO" secondAttribute="bottom" constant="8" id="nsY-vB-fNn"/>
                                         </constraints>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                    </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ceG-ZQ-NPR" firstAttribute="top" secondItem="sna-eX-DsS" secondAttribute="bottom" constant="20" id="Aup-EE-kP2"/>
                                     <constraint firstItem="ceG-ZQ-NPR" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="DCI-br-Tny"/>
+                                    <constraint firstItem="cZR-hZ-FLe" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="IIS-qJ-Nec"/>
                                     <constraint firstAttribute="trailing" secondItem="ceG-ZQ-NPR" secondAttribute="trailing" constant="20" id="JXE-hx-ejn"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cZR-hZ-FLe" secondAttribute="bottom" constant="20" id="L03-TA-9AJ"/>
                                     <constraint firstItem="sna-eX-DsS" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="TVs-UD-Yrq"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ceG-ZQ-NPR" secondAttribute="bottom" constant="20" id="aIn-RM-tEk"/>
                                     <constraint firstItem="sna-eX-DsS" firstAttribute="top" secondItem="CdD-WF-vqh" secondAttribute="top" constant="20" id="b8I-mf-ziI"/>
+                                    <constraint firstAttribute="trailing" secondItem="cZR-hZ-FLe" secondAttribute="trailing" constant="20" id="eSa-ab-Yme"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sna-eX-DsS" secondAttribute="trailing" constant="20" id="lDo-tV-hLf"/>
+                                    <constraint firstItem="cZR-hZ-FLe" firstAttribute="top" secondItem="ceG-ZQ-NPR" secondAttribute="bottom" constant="10" id="yyp-Xa-JrV"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -953,6 +928,9 @@
                             <constraint firstAttribute="trailing" secondItem="CdD-WF-vqh" secondAttribute="trailing" id="vbr-iN-pOD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackView" destination="ceG-ZQ-NPR" id="wRr-qv-AXB"/>
+                    </connections>
                 </viewController>
                 <customObject id="5ET-N7-3ze" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
