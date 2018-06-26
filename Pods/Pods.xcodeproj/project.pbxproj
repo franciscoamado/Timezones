@@ -7,79 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0352A1BB551E505EC774625F391C8374 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F269E4F2C06908272D92573D3CA82 /* Constrainable.swift */; };
-		1FE9F311C03699AB4A925F0EA036CB9E /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CEC240B055F7DDC6FEFBFEB77A5034 /* TinyConstraints-dummy.m */; };
-		241AC88F4969EC53CFA6AB757939AFA0 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8065292A58C8DDD75B067221AEE516 /* Abstraction.swift */; };
-		2E908DE3A74A700A6C2F9F34F352B0A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		339ACA1859F42318F06A012F2835F444 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB604E54EC59FFD9CB6D3452F8DD746 /* Stack.swift */; };
-		363E494399BDED29EAE123995BC6F366 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B3DFE1D40FED16980E5776F868FE8 /* TinyConstraints.swift */; };
-		3D731ABFA1719E9030BCA88A84EF1D91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
-		745A3C2338BF0770C0249091168B8EEF /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25986184A8E5CE7C392028CFE6361C4 /* Constraints.swift */; };
-		B3D4471958641490AD9D7D7534DC6063 /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B36A455C25EC7FFE080173BC205FC /* TinyConstraints+superview.swift */; };
-		C5AC9EF883CA9C7DE760A3CD0E6BF95A /* Pods-Timezones-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C81142B0C4F3A6B4AAB619F3D455F79F /* Pods-Timezones-dummy.m */; };
-		C947026A23346A5BD56DA79C5AF88F13 /* Pods-Timezones-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE0183112289277FC1309BADD206DD6 /* Pods-Timezones-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2D52A01E3C92722E68CBC428DCEE7A6 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDF5F42B0C1A4F8E6AE0EDB2A0E314A /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16B06A93DB5907AEA9D65490CC37DC5C /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */; };
+		22FA10479433518F6308A4338A37F9D4 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */; };
+		263F65885F2CCDFFE31A9DEA5E3EBC8A /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC871B7066428FF774C5F9208197F11C /* Middleware.swift */; };
+		3975A7A5B95046F27EF75F9154A06DD7 /* Pods-Timezones-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C81142B0C4F3A6B4AAB619F3D455F79F /* Pods-Timezones-dummy.m */; };
+		43DB9461D67850C81EF4C6195DD97F45 /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */; };
+		5400B642C3C73DE3924EFE462143D4E1 /* Pods-Timezones-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE0183112289277FC1309BADD206DD6 /* Pods-Timezones-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A99E6E9D03BBEB05F3E13D296C35EBD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		61667433B683F9E8797B85A32D7D842E /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */; };
+		731B682FB054AD86E9AF6843B9AD5231 /* ReSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7704703267C1A466817ECF735DFDC04E /* ReSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */; };
+		83AF17AEF28C4259F93B344522FBE518 /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */; };
+		8DC817D114E3FF43B26A5438029505E1 /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */; };
+		952B54790D014D426DA86AFF32F12C29 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */; };
+		A06608E46C6773732490471DAC17FF80 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */; };
+		A70C25773D349FB633B5B58899B316CD /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */; };
+		BB4D1550C26BC2C93872A35A7D21D3DE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */; };
+		C9FB5B7DE3722FF9078F47F5AEEC0564 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */; };
+		F7DED51E09341F6AC998EC55002EC425 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F82D32E66E298A21E43ECD8E82C908B4 /* PBXContainerItemProxy */ = {
+		1BAE9D31CEA6C9A6BAA5C09A8AE5D2F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 69234C0999578CCC278C2BE79C4F7217;
-			remoteInfo = TinyConstraints;
+			remoteGlobalIDString = C24FBB9B65B400AB8F4C06301FC50D4C;
+			remoteInfo = ReSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D92E217FF4EA23374F329F2B9871E2 /* TinyConstraints.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.xcconfig; sourceTree = "<group>"; };
-		0DDF5F42B0C1A4F8E6AE0EDB2A0E314A /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
 		1BE0183112289277FC1309BADD206DD6 /* Pods-Timezones-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Timezones-umbrella.h"; sourceTree = "<group>"; };
-		1FDD145ED0801FBD38368BDFD32986F0 /* Pods_Timezones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Timezones.framework; path = "Pods-Timezones.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assertions.swift; path = ReSwift/Utils/Assertions.swift; sourceTree = "<group>"; };
 		22A853006C5D4AFCABD39CB61D53D4F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		252071233C594325D37A898EBB64922C /* Pods-Timezones.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Timezones.modulemap"; sourceTree = "<group>"; };
-		258CAB0C4775E4EB4AA8644278AA45E0 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ReSwift/CoreTypes/Action.swift; sourceTree = "<group>"; };
+		2DC8390F73F6767F39FCFA0EA03FF4D5 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ReSwift.framework; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F8226CF1AAA0202CDC0D3686CF83DD6 /* Pods-Timezones-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Timezones-resources.sh"; sourceTree = "<group>"; };
+		305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReSwift.xcconfig; sourceTree = "<group>"; };
+		375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = ReSwift/CoreTypes/State.swift; sourceTree = "<group>"; };
 		57299D61966B30983C05551C3B6CB631 /* Pods-Timezones.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Timezones.release.xcconfig"; sourceTree = "<group>"; };
-		65208B9F7A2595AD2B761CF38BC4A35F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CB604E54EC59FFD9CB6D3452F8DD746 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
-		737F269E4F2C06908272D92573D3CA82 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
-		7A75E812D147AB63997390002E98757B /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		7D2B36A455C25EC7FFE080173BC205FC /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
+		71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ReSwift/CoreTypes/Reducer.swift; sourceTree = "<group>"; };
+		77A71D8C687087A51AFE4139E2BB0BD9 /* Pods_Timezones.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Timezones.framework; path = "Pods-Timezones.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = ReSwift/Utils/Coding.swift; sourceTree = "<group>"; };
+		81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ReSwift/CoreTypes/Store.swift; sourceTree = "<group>"; };
+		83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeHelper.swift; path = ReSwift/Utils/TypeHelper.swift; sourceTree = "<group>"; };
+		8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreType.swift; path = ReSwift/CoreTypes/StoreType.swift; sourceTree = "<group>"; };
 		8E88BD7F85A17568BE55AE0D81DD3338 /* Pods-Timezones-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Timezones-acknowledgements.plist"; sourceTree = "<group>"; };
-		90878EE1D353D6C94CA10B9B812553DE /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9632B848A020E18CE30927D8BEB43D91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D111F541C9F6EC7A3D6616216C67AEA /* Pods-Timezones.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Timezones.debug.xcconfig"; sourceTree = "<group>"; };
-		9D8065292A58C8DDD75B067221AEE516 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReSwift-dummy.m"; sourceTree = "<group>"; };
 		9F157DD8D64B216AF39E2B2BADB986DF /* Pods-Timezones-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Timezones-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchingStoreType.swift; path = ReSwift/CoreTypes/DispatchingStoreType.swift; sourceTree = "<group>"; };
+		AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreSubscriber.swift; path = ReSwift/CoreTypes/StoreSubscriber.swift; sourceTree = "<group>"; };
 		AFA951CF097BC2103EC54A355C53124C /* Pods-Timezones-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Timezones-frameworks.sh"; sourceTree = "<group>"; };
-		C5CEC240B055F7DDC6FEFBFEB77A5034 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-umbrella.h"; sourceTree = "<group>"; };
 		C81142B0C4F3A6B4AAB619F3D455F79F /* Pods-Timezones-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Timezones-dummy.m"; sourceTree = "<group>"; };
-		D25986184A8E5CE7C392028CFE6361C4 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
+		CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ReSwift/CoreTypes/Subscription.swift; sourceTree = "<group>"; };
+		DF00F887F15B2E15AF36620E45FA539E /* ReSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReSwift.modulemap; sourceTree = "<group>"; };
 		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		FC8B3DFE1D40FED16980E5776F868FE8 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		FC871B7066428FF774C5F9208197F11C /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = ReSwift/CoreTypes/Middleware.swift; sourceTree = "<group>"; };
+		FE06E1C81518F26C25E3FEACC6270203 /* ReSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		345ABC5CA008E9291AF5FFF39FA86DFE /* Frameworks */ = {
+		7407B25E3EC500C948EFEB9E7186FCAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D731ABFA1719E9030BCA88A84EF1D91 /* Cocoa.framework in Frameworks */,
+				F7DED51E09341F6AC998EC55002EC425 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		645CEB3B71683F05A58E0EE181F24931 /* Frameworks */ = {
+		9B0F4543ED293EEC9C031D12E13F68C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E908DE3A74A700A6C2F9F34F352B0A7 /* Cocoa.framework in Frameworks */,
+				5A99E6E9D03BBEB05F3E13D296C35EBD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1334C0328849627CED539AF332118725 /* ReSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2711A63FBF227A0CA669ED1D1EDB8F56 /* Action.swift */,
+				1F3C38E9357DF11B55A4279C68A73D47 /* Assertions.swift */,
+				79671FE58DCBAC8FB9711561D02ED4DA /* Coding.swift */,
+				AD6E955BFC89A34FDBF7FEE7631E7D19 /* DispatchingStoreType.swift */,
+				FC871B7066428FF774C5F9208197F11C /* Middleware.swift */,
+				71271725DE5CCC0BBEE81EB8E9D98E82 /* Reducer.swift */,
+				375E8868F8F6D6961F33EDED16FF1D5E /* State.swift */,
+				81CBAF76151CF858D574A099D1E7FC21 /* Store.swift */,
+				AE64CEF372085B24E500493911C621F9 /* StoreSubscriber.swift */,
+				8E6C9E17987035DE48EA9493A0C11119 /* StoreType.swift */,
+				CE9FF8A70D2AC7A1D137462E1C3E5CB1 /* Subscription.swift */,
+				83EDC964B22DDA588870C260A7A333C6 /* TypeHelper.swift */,
+				D3D68B54E743ABB0B1D0C26EC23C8DA4 /* Support Files */,
+			);
+			name = ReSwift;
+			path = ReSwift;
+			sourceTree = "<group>";
+		};
 		217A7AB11B41622312BD082DB525913D /* Pods-Timezones */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,19 +139,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		47D41FBAE08636674B250416F3CE63AE /* TinyConstraints */ = {
+		672BC0DC9900B0DDBCAD767352913FC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D8065292A58C8DDD75B067221AEE516 /* Abstraction.swift */,
-				737F269E4F2C06908272D92573D3CA82 /* Constrainable.swift */,
-				D25986184A8E5CE7C392028CFE6361C4 /* Constraints.swift */,
-				6CB604E54EC59FFD9CB6D3452F8DD746 /* Stack.swift */,
-				FC8B3DFE1D40FED16980E5776F868FE8 /* TinyConstraints.swift */,
-				7D2B36A455C25EC7FFE080173BC205FC /* TinyConstraints+superview.swift */,
-				9D70BA5FBA62C82F1BF1D7806510AE13 /* Support Files */,
+				77A71D8C687087A51AFE4139E2BB0BD9 /* Pods_Timezones.framework */,
+				2DC8390F73F6767F39FCFA0EA03FF4D5 /* ReSwift.framework */,
 			);
-			name = TinyConstraints;
-			path = TinyConstraints;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -126,18 +153,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				8A550A56F4606360CD946232A6965FB3 /* Pods */,
-				8ED3F87F267039B8B7F18459A45FF4B2 /* Products */,
+				A58919414556FF8285FCC0A42B1AC168 /* Pods */,
+				672BC0DC9900B0DDBCAD767352913FC8 /* Products */,
 				8AA721DFCEEAF317399514A776BD2C3A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8A550A56F4606360CD946232A6965FB3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				47D41FBAE08636674B250416F3CE63AE /* TinyConstraints */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		8AA721DFCEEAF317399514A776BD2C3A /* Targets Support Files */ = {
@@ -148,27 +167,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8ED3F87F267039B8B7F18459A45FF4B2 /* Products */ = {
+		A58919414556FF8285FCC0A42B1AC168 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1FDD145ED0801FBD38368BDFD32986F0 /* Pods_Timezones.framework */,
-				258CAB0C4775E4EB4AA8644278AA45E0 /* TinyConstraints.framework */,
+				1334C0328849627CED539AF332118725 /* ReSwift */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		9D70BA5FBA62C82F1BF1D7806510AE13 /* Support Files */ = {
+		D3D68B54E743ABB0B1D0C26EC23C8DA4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				65208B9F7A2595AD2B761CF38BC4A35F /* Info.plist */,
-				90878EE1D353D6C94CA10B9B812553DE /* TinyConstraints.modulemap */,
-				00D92E217FF4EA23374F329F2B9871E2 /* TinyConstraints.xcconfig */,
-				C5CEC240B055F7DDC6FEFBFEB77A5034 /* TinyConstraints-dummy.m */,
-				7A75E812D147AB63997390002E98757B /* TinyConstraints-prefix.pch */,
-				0DDF5F42B0C1A4F8E6AE0EDB2A0E314A /* TinyConstraints-umbrella.h */,
+				9632B848A020E18CE30927D8BEB43D91 /* Info.plist */,
+				DF00F887F15B2E15AF36620E45FA539E /* ReSwift.modulemap */,
+				305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */,
+				9ECB752D7054DBEA116738D7BA747A85 /* ReSwift-dummy.m */,
+				FE06E1C81518F26C25E3FEACC6270203 /* ReSwift-prefix.pch */,
+				C725CAA1819E4CE7F26BCE1C18EC0C29 /* ReSwift-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TinyConstraints";
+			path = "../Target Support Files/ReSwift";
 			sourceTree = "<group>";
 		};
 		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
@@ -182,58 +200,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		315AF3E91DBD0BE15D18136171ED2CF3 /* Headers */ = {
+		1C5CDA9D9B091B03EA72FE0CFEB28BDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D52A01E3C92722E68CBC428DCEE7A6 /* TinyConstraints-umbrella.h in Headers */,
+				5400B642C3C73DE3924EFE462143D4E1 /* Pods-Timezones-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB494D0DAA9DB3C14B11ACBB1DFF28BA /* Headers */ = {
+		3A119AD507F313B659411BDD3FCC0587 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C947026A23346A5BD56DA79C5AF88F13 /* Pods-Timezones-umbrella.h in Headers */,
+				731B682FB054AD86E9AF6843B9AD5231 /* ReSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		69234C0999578CCC278C2BE79C4F7217 /* TinyConstraints */ = {
+		C24FBB9B65B400AB8F4C06301FC50D4C /* ReSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D82F9B472597390919B88D53E4BA23A /* Build configuration list for PBXNativeTarget "TinyConstraints" */;
+			buildConfigurationList = C2ABD9A8F3BF8E68DC4AB5D8BBC828D5 /* Build configuration list for PBXNativeTarget "ReSwift" */;
 			buildPhases = (
-				B5DEE1CB869A9174BA8EF1EE2EA4A3E4 /* Sources */,
-				345ABC5CA008E9291AF5FFF39FA86DFE /* Frameworks */,
-				315AF3E91DBD0BE15D18136171ED2CF3 /* Headers */,
+				4C5F5EE21D97403134DB605002907DEE /* Sources */,
+				7407B25E3EC500C948EFEB9E7186FCAA /* Frameworks */,
+				3A119AD507F313B659411BDD3FCC0587 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TinyConstraints;
-			productName = TinyConstraints;
-			productReference = 258CAB0C4775E4EB4AA8644278AA45E0 /* TinyConstraints.framework */;
+			name = ReSwift;
+			productName = ReSwift;
+			productReference = 2DC8390F73F6767F39FCFA0EA03FF4D5 /* ReSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F63E0C3ABE78B8A5F56FD61A9C01023D /* Pods-Timezones */ = {
+		F55785E82CE702640AD61972611E4B7F /* Pods-Timezones */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04AEE46A2D9C6F90A97BD9F01FB6297C /* Build configuration list for PBXNativeTarget "Pods-Timezones" */;
+			buildConfigurationList = 863D9B1A7088078890042501A72F1BED /* Build configuration list for PBXNativeTarget "Pods-Timezones" */;
 			buildPhases = (
-				65B59326015DE5E9691EAC7B84E1752A /* Sources */,
-				645CEB3B71683F05A58E0EE181F24931 /* Frameworks */,
-				AB494D0DAA9DB3C14B11ACBB1DFF28BA /* Headers */,
+				59798555810364AF0EC9589CA6121609 /* Sources */,
+				9B0F4543ED293EEC9C031D12E13F68C2 /* Frameworks */,
+				1C5CDA9D9B091B03EA72FE0CFEB28BDA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AC43DF5838BB6362B8A757122D93249E /* PBXTargetDependency */,
+				7DA9958400D66D9E17939D3A54B82A2B /* PBXTargetDependency */,
 			);
 			name = "Pods-Timezones";
 			productName = "Pods-Timezones";
-			productReference = 1FDD145ED0801FBD38368BDFD32986F0 /* Pods_Timezones.framework */;
+			productReference = 77A71D8C687087A51AFE4139E2BB0BD9 /* Pods_Timezones.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -253,56 +271,61 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8ED3F87F267039B8B7F18459A45FF4B2 /* Products */;
+			productRefGroup = 672BC0DC9900B0DDBCAD767352913FC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F63E0C3ABE78B8A5F56FD61A9C01023D /* Pods-Timezones */,
-				69234C0999578CCC278C2BE79C4F7217 /* TinyConstraints */,
+				F55785E82CE702640AD61972611E4B7F /* Pods-Timezones */,
+				C24FBB9B65B400AB8F4C06301FC50D4C /* ReSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		65B59326015DE5E9691EAC7B84E1752A /* Sources */ = {
+		4C5F5EE21D97403134DB605002907DEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AC9EF883CA9C7DE760A3CD0E6BF95A /* Pods-Timezones-dummy.m in Sources */,
+				22FA10479433518F6308A4338A37F9D4 /* Action.swift in Sources */,
+				A70C25773D349FB633B5B58899B316CD /* Assertions.swift in Sources */,
+				61667433B683F9E8797B85A32D7D842E /* Coding.swift in Sources */,
+				8DC817D114E3FF43B26A5438029505E1 /* DispatchingStoreType.swift in Sources */,
+				263F65885F2CCDFFE31A9DEA5E3EBC8A /* Middleware.swift in Sources */,
+				16B06A93DB5907AEA9D65490CC37DC5C /* Reducer.swift in Sources */,
+				7704703267C1A466817ECF735DFDC04E /* ReSwift-dummy.m in Sources */,
+				BB4D1550C26BC2C93872A35A7D21D3DE /* State.swift in Sources */,
+				A06608E46C6773732490471DAC17FF80 /* Store.swift in Sources */,
+				83AF17AEF28C4259F93B344522FBE518 /* StoreSubscriber.swift in Sources */,
+				C9FB5B7DE3722FF9078F47F5AEEC0564 /* StoreType.swift in Sources */,
+				952B54790D014D426DA86AFF32F12C29 /* Subscription.swift in Sources */,
+				43DB9461D67850C81EF4C6195DD97F45 /* TypeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5DEE1CB869A9174BA8EF1EE2EA4A3E4 /* Sources */ = {
+		59798555810364AF0EC9589CA6121609 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241AC88F4969EC53CFA6AB757939AFA0 /* Abstraction.swift in Sources */,
-				0352A1BB551E505EC774625F391C8374 /* Constrainable.swift in Sources */,
-				745A3C2338BF0770C0249091168B8EEF /* Constraints.swift in Sources */,
-				339ACA1859F42318F06A012F2835F444 /* Stack.swift in Sources */,
-				B3D4471958641490AD9D7D7534DC6063 /* TinyConstraints+superview.swift in Sources */,
-				1FE9F311C03699AB4A925F0EA036CB9E /* TinyConstraints-dummy.m in Sources */,
-				363E494399BDED29EAE123995BC6F366 /* TinyConstraints.swift in Sources */,
+				3975A7A5B95046F27EF75F9154A06DD7 /* Pods-Timezones-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AC43DF5838BB6362B8A757122D93249E /* PBXTargetDependency */ = {
+		7DA9958400D66D9E17939D3A54B82A2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TinyConstraints;
-			target = 69234C0999578CCC278C2BE79C4F7217 /* TinyConstraints */;
-			targetProxy = F82D32E66E298A21E43ECD8E82C908B4 /* PBXContainerItemProxy */;
+			name = ReSwift;
+			target = C24FBB9B65B400AB8F4C06301FC50D4C /* ReSwift */;
+			targetProxy = 1BAE9D31CEA6C9A6BAA5C09A8AE5D2F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		77EBAC456566103D6BE1EEA23516AEF2 /* Debug */ = {
+		494FBA459C3C5327F6688A3DB73594A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D111F541C9F6EC7A3D6616216C67AEA /* Pods-Timezones.debug.xcconfig */;
+			baseConfigurationReference = 305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -315,69 +338,27 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Timezones/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Timezones/Pods-Timezones.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
+				PRODUCT_MODULE_NAME = ReSwift;
+				PRODUCT_NAME = ReSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		820C6FB36D8E0CA78C8F7A10F5A58A3F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57299D61966B30983C05551C3B6CB631 /* Pods-Timezones.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-Timezones/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MODULEMAP_FILE = "Target Support Files/Pods-Timezones/Pods-Timezones.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		885072FBE917853E9C621EA32511C1DA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -442,9 +423,9 @@
 			};
 			name = Debug;
 		};
-		B2578B323BDCB211A05BC3EC8744BD65 /* Release */ = {
+		BC8A1A0869BCD494BC97D48861F3F5C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00D92E217FF4EA23374F329F2B9871E2 /* TinyConstraints.xcconfig */;
+			baseConfigurationReference = 305A42E0F7864F0B38070F931A4ED80F /* ReSwift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -458,23 +439,104 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift/ReSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
-				PRODUCT_MODULE_NAME = TinyConstraints;
-				PRODUCT_NAME = TinyConstraints;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/ReSwift/ReSwift.modulemap";
+				PRODUCT_MODULE_NAME = ReSwift;
+				PRODUCT_NAME = ReSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC81A9329E55889A19D773EFA2989E96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D111F541C9F6EC7A3D6616216C67AEA /* Pods-Timezones.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Timezones/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Timezones/Pods-Timezones.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0BA9BBBED191CB8C70F25E23D741E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57299D61966B30983C05551C3B6CB631 /* Pods-Timezones.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Timezones/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Timezones/Pods-Timezones.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -538,70 +600,32 @@
 			};
 			name = Release;
 		};
-		ED79AF1D1CB9485D9EDACB579D64945F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00D92E217FF4EA23374F329F2B9871E2 /* TinyConstraints.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/TinyConstraints/TinyConstraints-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TinyConstraints/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/TinyConstraints/TinyConstraints.modulemap";
-				PRODUCT_MODULE_NAME = TinyConstraints;
-				PRODUCT_NAME = TinyConstraints;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04AEE46A2D9C6F90A97BD9F01FB6297C /* Build configuration list for PBXNativeTarget "Pods-Timezones" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				77EBAC456566103D6BE1EEA23516AEF2 /* Debug */,
-				820C6FB36D8E0CA78C8F7A10F5A58A3F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D82F9B472597390919B88D53E4BA23A /* Build configuration list for PBXNativeTarget "TinyConstraints" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED79AF1D1CB9485D9EDACB579D64945F /* Debug */,
-				B2578B323BDCB211A05BC3EC8744BD65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				885072FBE917853E9C621EA32511C1DA /* Debug */,
 				E574923E2959CFEF4FEBC7B272DBC6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		863D9B1A7088078890042501A72F1BED /* Build configuration list for PBXNativeTarget "Pods-Timezones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC81A9329E55889A19D773EFA2989E96 /* Debug */,
+				E0BA9BBBED191CB8C70F25E23D741E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2ABD9A8F3BF8E68DC4AB5D8BBC828D5 /* Build configuration list for PBXNativeTarget "ReSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				494FBA459C3C5327F6688A3DB73594A5 /* Debug */,
+				BC8A1A0869BCD494BC97D48861F3F5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

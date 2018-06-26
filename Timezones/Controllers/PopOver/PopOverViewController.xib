@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PopOverViewController" customModule="Timezones" customModuleProvider="target">
             <connections>
-                <outlet property="stackView" destination="fpV-hJ-cxT" id="bSv-jW-4S1"/>
+                <outlet property="stackView" destination="oWA-78-QSc" id="g9t-kE-KYD"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -41,29 +41,53 @@
                         <constraint firstItem="Ey0-VW-fkY" firstAttribute="leading" secondItem="R2L-Rh-KEy" secondAttribute="leading" constant="20" id="v0D-gn-mo3"/>
                     </constraints>
                 </customView>
-                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-hJ-cxT">
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="sdZ-T6-DDf">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
-                    <subviews>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="KgU-1T-Xfa" customClass="TimezoneInfoView" customModule="Timezones" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="163" height="320"/>
-                        </customView>
-                    </subviews>
-                    <visibilityPriorities>
-                        <integer value="1000"/>
-                    </visibilityPriorities>
-                    <customSpacing>
-                        <real value="3.4028234663852886e+38"/>
-                    </customSpacing>
-                </stackView>
+                    <clipView key="contentView" drawsBackground="NO" id="9Yw-36-nrb">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-zR-Ylt">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWA-78-QSc">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                    </stackView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ivx-zR-Ylt" firstAttribute="top" secondItem="9Yw-36-nrb" secondAttribute="top" id="7EI-yx-MYS"/>
+                            <constraint firstAttribute="bottom" secondItem="Ivx-zR-Ylt" secondAttribute="bottom" id="Qw8-kf-Y4Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Ivx-zR-Ylt" secondAttribute="trailing" id="Z7g-lm-h2A"/>
+                            <constraint firstItem="Ivx-zR-Ylt" firstAttribute="leading" secondItem="9Yw-36-nrb" secondAttribute="leading" id="zha-vS-DiR"/>
+                        </constraints>
+                    </clipView>
+                    <constraints>
+                        <constraint firstItem="oWA-78-QSc" firstAttribute="width" secondItem="sdZ-T6-DDf" secondAttribute="width" id="YQO-nk-HeO"/>
+                    </constraints>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="cVR-rH-SQp">
+                        <rect key="frame" x="-100" y="-100" width="480" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9sq-wP-KJp">
+                        <rect key="frame" x="-100" y="-100" width="16" height="320"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
             </subviews>
             <constraints>
+                <constraint firstItem="sdZ-T6-DDf" firstAttribute="top" secondItem="R2L-Rh-KEy" secondAttribute="bottom" id="4eD-U4-XcX"/>
                 <constraint firstAttribute="trailing" secondItem="R2L-Rh-KEy" secondAttribute="trailing" id="4fe-gS-42p"/>
-                <constraint firstItem="fpV-hJ-cxT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="DQn-Mg-Wqx"/>
+                <constraint firstAttribute="bottom" secondItem="sdZ-T6-DDf" secondAttribute="bottom" id="5ay-pQ-Jdo"/>
+                <constraint firstItem="sdZ-T6-DDf" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="9kM-6B-vFK"/>
+                <constraint firstItem="oWA-78-QSc" firstAttribute="top" secondItem="R2L-Rh-KEy" secondAttribute="bottom" id="MG6-l0-zXF"/>
                 <constraint firstItem="R2L-Rh-KEy" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="VVl-L3-Dcm"/>
-                <constraint firstItem="fpV-hJ-cxT" firstAttribute="top" secondItem="R2L-Rh-KEy" secondAttribute="bottom" id="WQ5-jp-z6k"/>
                 <constraint firstItem="R2L-Rh-KEy" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="gRD-u2-d1d"/>
-                <constraint firstAttribute="trailing" secondItem="fpV-hJ-cxT" secondAttribute="trailing" id="neT-nz-mFs"/>
-                <constraint firstAttribute="bottom" secondItem="fpV-hJ-cxT" secondAttribute="bottom" id="uAw-bM-KQm"/>
+                <constraint firstAttribute="bottom" secondItem="oWA-78-QSc" secondAttribute="bottom" id="ggc-go-WBb"/>
+                <constraint firstItem="oWA-78-QSc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="kHa-yh-Dvy"/>
+                <constraint firstAttribute="trailing" secondItem="sdZ-T6-DDf" secondAttribute="trailing" id="n41-N1-qHq"/>
+                <constraint firstAttribute="trailing" secondItem="oWA-78-QSc" secondAttribute="trailing" id="nsV-ab-rfk"/>
             </constraints>
             <point key="canvasLocation" x="139" y="-63"/>
         </customView>

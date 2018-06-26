@@ -6,6 +6,6 @@ target 'Timezones' do
   use_frameworks!
 
   # Pods for Timezones
-  pod 'TinyConstraints'
+  pod 'ReSwift', '~> 4.0.0'
 
 end

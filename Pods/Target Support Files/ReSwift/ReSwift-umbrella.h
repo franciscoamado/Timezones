@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TinyConstraintsVersionNumber;
-FOUNDATION_EXPORT const unsigned char TinyConstraintsVersionString[];
+FOUNDATION_EXPORT double ReSwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char ReSwiftVersionString[];
 

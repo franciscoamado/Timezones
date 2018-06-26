@@ -7,16 +7,29 @@
 //
 
 import Cocoa
+import ReSwift
 
 class AppCoordinator {
 
-    var mainViewController: MainViewController? = nil
     let popOverCoordinator: PopOverCoordinator
+    var mainViewController: MainViewController? = nil
 
-    init() {
+    var store: AppStore
 
-        self.popOverCoordinator = PopOverCoordinator()
+    fileprivate let userDefaults: UserDefaults
+
+    init(store: AppStore,
+         popOverCoordinator: PopOverCoordinator? = nil,
+         userDefaults: UserDefaults = .standard) {
+
+        self.store = store
+        self.userDefaults = userDefaults
+        self.popOverCoordinator = popOverCoordinator ?? PopOverCoordinator(state: store.state.timezoneState)
+
         self.popOverCoordinator.delegate = self
+        self.store.subscribe(self)
+        self.fetchAllCountries()
+        self.fetchAllTimezones()
     }
 
     private var mainWindowController: MainWindowController?
@@ -40,21 +53,36 @@ class AppCoordinator {
             return
         }
 
+        if let mainViewController = mainWindowController.contentViewController as? MainViewController {
+
+            mainViewController.store = store
+        }
+
         if let window = mainWindowController.window {
 
             window.center()
             window.makeKeyAndOrderFront(self)
         }
+    }
+}
 
-        if let mainViewController = mainWindowController.contentViewController as? MainViewController {
+extension AppCoordinator {
 
-            mainViewController.configure(.init(
-                selectedCountryName: "Portugal",
-                selectedCountryIdentifier: "PT",
-                startAtLogin: false
-                )
-            )
+    fileprivate func fetchAllTimezones() {
+
+        let allTimeZones = TimeZone.all.compactMap { timezone -> String in
+
+            return timezone.formatted
         }
+
+        store.dispatch(AppAction.fetchedAllTimezones(timezones: allTimeZones))
+    }
+
+    fileprivate func fetchAllCountries() {
+
+        let allCountries = NSLocale.allCountriesLocalized
+
+        store.dispatch(AppAction.fetchedAllCountries(countries: allCountries))
     }
 }
 
@@ -63,5 +91,14 @@ extension AppCoordinator: PopOverCoordinatorDelegate {
     func selectSettings() {
 
         self.openMainWindow()
+    }
+}
+
+extension AppCoordinator: StoreSubscriber {
+
+    func newState(state: AppState) {
+
+        print("NEW STATE")
+        popOverCoordinator.state = state.timezoneState
     }
 }

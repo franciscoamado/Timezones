@@ -849,25 +849,24 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="Fbb-Ex-kqy" id="3cd-m9-ZNe"/>
                         <outlet property="locationSelectionButton" destination="dN3-yK-3Ft" id="7c0-Mp-yGk"/>
                         <outlet property="startAtLoginButton" destination="rYK-ed-ig5" id="4mA-O0-kiY"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="74" y="757"/>
         </scene>
         <!--Timezone Selection View Controller-->
         <scene sceneID="Qys-ed-oDI">
             <objects>
                 <viewController storyboardIdentifier="TimezonesViewController" id="4ns-59-xyr" customClass="TimezoneSelectionViewController" customModule="Timezones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="vTx-eV-ur6">
-                        <rect key="frame" x="0.0" y="0.0" width="655" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="656" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="CdD-WF-vqh" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="0.0" width="655" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="656" height="300"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sna-eX-DsS">
                                         <rect key="frame" x="18" y="263" width="70" height="17"/>
@@ -881,43 +880,60 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-ZQ-NPR">
-                                        <rect key="frame" x="20" y="243" width="615" height="0.0"/>
+                                        <rect key="frame" x="20" y="243" width="616" height="0.0"/>
                                     </stackView>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cZR-hZ-FLe">
-                                        <rect key="frame" x="20" y="199" width="615" height="34"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-JR-cWI">
+                                        <rect key="frame" x="576" y="260" width="40" height="20"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-dF-3pO">
-                                                <rect key="frame" x="254" y="7" width="107" height="19"/>
-                                                <buttonCell key="cell" type="roundRect" title="+ Add Timezone" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rcR-DL-OtC">
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DJE-wi-WgS" userLabel="Add Timezone">
+                                                <rect key="frame" x="0.0" y="-1" width="20" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="XN3-jq-avt"/>
+                                                    <constraint firstAttribute="width" constant="20" id="pOG-qK-gGP"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BmC-Fi-Bgl">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="cellTitle"/>
-                                                    <connections>
-                                                        <action selector="addTimezone:" target="4ns-59-xyr" id="FLf-Nw-Q8b"/>
-                                                    </connections>
+                                                    <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="addTimezone:" target="4ns-59-xyr" id="bbp-8C-b7V"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wbq-4m-FWP" userLabel="Remove Timezone">
+                                                <rect key="frame" x="20" y="-1" width="20" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="5Px-4T-yts"/>
+                                                    <constraint firstAttribute="height" constant="20" id="9sM-jT-2x1"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ab7-6T-prA">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="removeTimezone:" target="4ns-59-xyr" id="iAV-wp-ib9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="top" secondItem="cZR-hZ-FLe" secondAttribute="top" constant="8" id="K8f-ls-ajs"/>
-                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="centerX" secondItem="cZR-hZ-FLe" secondAttribute="centerX" id="RNK-LI-rRO"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SWH-dF-3pO" secondAttribute="trailing" constant="16" id="amb-rN-Nye"/>
-                                            <constraint firstItem="SWH-dF-3pO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cZR-hZ-FLe" secondAttribute="leading" constant="16" id="gxd-53-mRJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="SWH-dF-3pO" secondAttribute="bottom" constant="8" id="nsY-vB-fNn"/>
-                                        </constraints>
-                                    </customView>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ceG-ZQ-NPR" firstAttribute="top" secondItem="sna-eX-DsS" secondAttribute="bottom" constant="20" id="Aup-EE-kP2"/>
                                     <constraint firstItem="ceG-ZQ-NPR" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="DCI-br-Tny"/>
-                                    <constraint firstItem="cZR-hZ-FLe" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="IIS-qJ-Nec"/>
                                     <constraint firstAttribute="trailing" secondItem="ceG-ZQ-NPR" secondAttribute="trailing" constant="20" id="JXE-hx-ejn"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cZR-hZ-FLe" secondAttribute="bottom" constant="20" id="L03-TA-9AJ"/>
                                     <constraint firstItem="sna-eX-DsS" firstAttribute="leading" secondItem="CdD-WF-vqh" secondAttribute="leading" constant="20" id="TVs-UD-Yrq"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ceG-ZQ-NPR" secondAttribute="bottom" constant="20" id="aIn-RM-tEk"/>
                                     <constraint firstItem="sna-eX-DsS" firstAttribute="top" secondItem="CdD-WF-vqh" secondAttribute="top" constant="20" id="b8I-mf-ziI"/>
-                                    <constraint firstAttribute="trailing" secondItem="cZR-hZ-FLe" secondAttribute="trailing" constant="20" id="eSa-ab-Yme"/>
+                                    <constraint firstItem="b4f-JR-cWI" firstAttribute="top" secondItem="CdD-WF-vqh" secondAttribute="top" constant="20" id="dfN-MQ-Hyg"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sna-eX-DsS" secondAttribute="trailing" constant="20" id="lDo-tV-hLf"/>
-                                    <constraint firstItem="cZR-hZ-FLe" firstAttribute="top" secondItem="ceG-ZQ-NPR" secondAttribute="bottom" constant="10" id="yyp-Xa-JrV"/>
+                                    <constraint firstAttribute="trailing" secondItem="b4f-JR-cWI" secondAttribute="trailing" constant="40" id="pkf-Ud-AjR"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -934,7 +950,11 @@
                 </viewController>
                 <customObject id="5ET-N7-3ze" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1206"/>
+            <point key="canvasLocation" x="74" y="1255"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
 </document>

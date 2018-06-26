@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "69234C0999578CCC278C2BE79C4F7217"
-               BlueprintName = "TinyConstraints"
+               BlueprintIdentifier = "C24FBB9B65B400AB8F4C06301FC50D4C"
+               BlueprintName = "ReSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TinyConstraints.framework">
+               BuildableName = "ReSwift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

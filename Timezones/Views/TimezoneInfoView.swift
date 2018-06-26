@@ -9,12 +9,11 @@
 import Cocoa
 
 @IBDesignable
-class TimezoneInfoView: NSView {
+class TimezoneInfoView: NSView, NibLoadable {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         // Drawing code here.
     }
-    
 }

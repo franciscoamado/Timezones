@@ -16,14 +16,31 @@ protocol PopOverCoordinatorDelegate: class {
 
 class PopOverCoordinator {
 
-    let viewController: PopOverViewController
+    let viewController: PopOverViewController?
 
     weak var delegate: PopOverCoordinatorDelegate?
 
-    init(with delegate: PopOverCoordinatorDelegate? = nil) {
+    var state: TimezoneState {
+        didSet {
+            print("UPDATED POPOVERCOORDINATOR TIMEZONESTATE")
+            viewController?.state = state
+        }
+    }
 
-        self.viewController = PopOverViewController.instantiate()
-        self.viewController.coordinator = self
+    init(state: TimezoneState, delegate: PopOverCoordinatorDelegate? = nil) {
+
+        self.state = state
+        viewController = PopOverViewController.instantiate()
+        viewController?.coordinator = self
+        viewController?.state = state
+    }
+}
+
+extension PopOverCoordinator {
+
+    struct State {
+
+        var timezones: [String]
     }
 }
 
@@ -31,6 +48,6 @@ extension PopOverCoordinator: PopOverCoordinatorDelegate {
 
     func selectSettings() {
 
-        self.delegate?.selectSettings()
+        delegate?.selectSettings()
     }
 }

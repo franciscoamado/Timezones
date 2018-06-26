@@ -10,6 +10,13 @@
 		6B055C2320D72D730062B9A1 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B055C2220D72D730062B9A1 /* MainWindowController.swift */; };
 		6B3CBFE220D72DEC00C8AB20 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3CBFE120D72DEC00C8AB20 /* MainViewController.swift */; };
 		6B3CBFEC20D72F8400C8AB20 /* Translations.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B3CBFEE20D72F8500C8AB20 /* Translations.strings */; };
+		6B4D56D520E1B18F00D9C840 /* NSView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56D420E1B18F00D9C840 /* NSView+Utils.swift */; };
+		6B4D56D820E1B2AA00D9C840 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56D720E1B2AA00D9C840 /* NibLoadable.swift */; };
+		6B4D56DA20E1B2D900D9C840 /* NSViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56D920E1B2D900D9C840 /* NSViewController+Utils.swift */; };
+		6B4D56DD20E1B9BA00D9C840 /* Collection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56DC20E1B9BA00D9C840 /* Collection+Utils.swift */; };
+		6B4D56E220E1BD8600D9C840 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E120E1BD8600D9C840 /* AppState.swift */; };
+		6B4D56E420E1BDBE00D9C840 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E320E1BDBE00D9C840 /* AppReducer.swift */; };
+		6B4D56E620E1BDF600D9C840 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E520E1BDF600D9C840 /* AppStore.swift */; };
 		6B9859CE20D4762B00CA37CD /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9859CC20D4762B00CA37CD /* PopOverViewController.swift */; };
 		6B9859CF20D4762B00CA37CD /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9859CD20D4762B00CA37CD /* PopOverViewController.xib */; };
 		6B9F8D9B20D1D44800024495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8D9A20D1D44800024495 /* AppDelegate.swift */; };
@@ -22,7 +29,7 @@
 		6BE3A2D620D5A30A00ACEBC6 /* PopOverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3A2D520D5A30A00ACEBC6 /* PopOverCoordinator.swift */; };
 		6BE5D32C20DE9BD100E96DA4 /* TimezoneInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE5D32B20DE9BD100E96DA4 /* TimezoneInfoView.xib */; };
 		6BE5D33020DE9C9400E96DA4 /* TimezoneInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5D32F20DE9C9400E96DA4 /* TimezoneInfoView.swift */; };
-		6BE5D33420DE9FA000E96DA4 /* TimezoneSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionView.swift */; };
+		6BE5D33420DE9FA000E96DA4 /* TimezoneSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionButton.swift */; };
 		6BE5D33920DEA08700E96DA4 /* TimezoneSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE5D33720DEA08700E96DA4 /* TimezoneSelectionViewController.swift */; };
 		E458292AB7A162428CAE375D /* Pods_Timezones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB10399B851C565C9C816B3 /* Pods_Timezones.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +42,13 @@
 		6B3CBFE120D72DEC00C8AB20 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6B3CBFED20D72F8500C8AB20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Translations.strings; sourceTree = "<group>"; };
 		6B3CBFEF20D7305300C8AB20 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Translations.strings"; sourceTree = "<group>"; };
+		6B4D56D420E1B18F00D9C840 /* NSView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Utils.swift"; sourceTree = "<group>"; };
+		6B4D56D720E1B2AA00D9C840 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		6B4D56D920E1B2D900D9C840 /* NSViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Utils.swift"; sourceTree = "<group>"; };
+		6B4D56DC20E1B9BA00D9C840 /* Collection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Utils.swift"; sourceTree = "<group>"; };
+		6B4D56E120E1BD8600D9C840 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6B4D56E320E1BDBE00D9C840 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		6B4D56E520E1BDF600D9C840 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		6B9859CC20D4762B00CA37CD /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		6B9859CD20D4762B00CA37CD /* PopOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopOverViewController.xib; sourceTree = "<group>"; };
 		6B9F8D9720D1D44800024495 /* Timezones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timezones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +64,7 @@
 		6BE3A2D520D5A30A00ACEBC6 /* PopOverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverCoordinator.swift; sourceTree = "<group>"; };
 		6BE5D32B20DE9BD100E96DA4 /* TimezoneInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimezoneInfoView.xib; sourceTree = "<group>"; };
 		6BE5D32F20DE9C9400E96DA4 /* TimezoneInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneInfoView.swift; sourceTree = "<group>"; };
-		6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneSelectionView.swift; sourceTree = "<group>"; };
+		6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneSelectionButton.swift; sourceTree = "<group>"; };
 		6BE5D33720DEA08700E96DA4 /* TimezoneSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +96,46 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		6B4D56D620E1B29900D9C840 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D56D720E1B2AA00D9C840 /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6B4D56DB20E1B99200D9C840 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D56DC20E1B9BA00D9C840 /* Collection+Utils.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		6B4D56DE20E1BD5500D9C840 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D56E120E1BD8600D9C840 /* AppState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		6B4D56DF20E1BD5900D9C840 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D56E320E1BDBE00D9C840 /* AppReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		6B4D56E020E1BD6000D9C840 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D56E520E1BDF600D9C840 /* AppStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		6B9F8D8E20D1D44800024495 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +161,10 @@
 				6B9F8D9E20D1D44900024495 /* Assets.xcassets */,
 				6BE3A2D820D6818700ACEBC6 /* Controllers */,
 				6BE3A2D720D6817C00ACEBC6 /* Coordinators */,
+				6B4D56DF20E1BD5900D9C840 /* Reducers */,
 				6B3CBFE320D72E6F00C8AB20 /* Resources */,
+				6B4D56DE20E1BD5500D9C840 /* States */,
+				6B4D56E020E1BD6000D9C840 /* Stores */,
 				6BE3A2DA20D681BC00ACEBC6 /* Supporting Files */,
 				6BE3A2D220D5A13100ACEBC6 /* Utils */,
 				6BE3A2D920D6819800ACEBC6 /* Views */,
@@ -137,9 +194,13 @@
 		6BE3A2D220D5A13100ACEBC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6B4D56DB20E1B99200D9C840 /* Foundation */,
+				6B4D56D620E1B29900D9C840 /* Protocols */,
 				6BE3A2D020D5A0B500ACEBC6 /* EventMonitor.swift */,
 				6BBB2C4520E04117007044A7 /* Locale+Utils.swift */,
 				6BBB2C4720E042E2007044A7 /* TimeZone+Utils.swift */,
+				6B4D56D420E1B18F00D9C840 /* NSView+Utils.swift */,
+				6B4D56D920E1B2D900D9C840 /* NSViewController+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -168,7 +229,7 @@
 				6B9F8DA020D1D44900024495 /* Main.storyboard */,
 				6BE5D32F20DE9C9400E96DA4 /* TimezoneInfoView.swift */,
 				6BE5D32B20DE9BD100E96DA4 /* TimezoneInfoView.xib */,
-				6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionView.swift */,
+				6BE5D33320DE9FA000E96DA4 /* TimezoneSelectionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,11 +357,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Timezones/Pods-Timezones-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,12 +377,19 @@
 			files = (
 				6B055C2320D72D730062B9A1 /* MainWindowController.swift in Sources */,
 				6B9F8D9B20D1D44800024495 /* AppDelegate.swift in Sources */,
-				6BE5D33420DE9FA000E96DA4 /* TimezoneSelectionView.swift in Sources */,
+				6BE5D33420DE9FA000E96DA4 /* TimezoneSelectionButton.swift in Sources */,
+				6B4D56D520E1B18F00D9C840 /* NSView+Utils.swift in Sources */,
+				6B4D56DA20E1B2D900D9C840 /* NSViewController+Utils.swift in Sources */,
 				6BE3A2D620D5A30A00ACEBC6 /* PopOverCoordinator.swift in Sources */,
+				6B4D56E220E1BD8600D9C840 /* AppState.swift in Sources */,
+				6B4D56E620E1BDF600D9C840 /* AppStore.swift in Sources */,
 				6BE5D33020DE9C9400E96DA4 /* TimezoneInfoView.swift in Sources */,
 				6BE3A2D420D5A1E800ACEBC6 /* AppCoordinator.swift in Sources */,
 				6B3CBFE220D72DEC00C8AB20 /* MainViewController.swift in Sources */,
+				6B4D56DD20E1B9BA00D9C840 /* Collection+Utils.swift in Sources */,
 				6BBB2C4620E04117007044A7 /* Locale+Utils.swift in Sources */,
+				6B4D56E420E1BDBE00D9C840 /* AppReducer.swift in Sources */,
+				6B4D56D820E1B2AA00D9C840 /* NibLoadable.swift in Sources */,
 				6B9859CE20D4762B00CA37CD /* PopOverViewController.swift in Sources */,
 				6BE5D33920DEA08700E96DA4 /* TimezoneSelectionViewController.swift in Sources */,
 				6BBB2C4820E042E2007044A7 /* TimeZone+Utils.swift in Sources */,

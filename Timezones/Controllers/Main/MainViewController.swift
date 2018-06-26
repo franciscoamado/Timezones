@@ -7,25 +7,32 @@
 //
 
 import Cocoa
+import ReSwift
 
 class MainViewController: NSViewController {
 
-    @IBOutlet weak var containerView: NSView!
     @IBOutlet weak var locationSelectionButton: NSPopUpButton!
     @IBOutlet weak var startAtLoginButton: NSButton!
     
-    fileprivate var state: MainState? {
-        didSet {
-            configureLocationButton(with: state?.selectedCountryName)
-            configureStartAtLoginButton(with: state?.startAtLogin)
-        }
+    var store: AppStore?
+
+    var selectionViewController: TimezoneSelectionViewController? {
+
+        return children.flatMap { $0 as? TimezoneSelectionViewController }.first
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
-        configureLocationButton()
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        store?.subscribe(self)
+    }
+
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        store?.unsubscribe(self)
     }
 
     override var representedObject: Any? {
@@ -35,34 +42,18 @@ class MainViewController: NSViewController {
     }
 }
 
-// MARK: - State
-extension MainViewController {
-
-    struct MainState {
-
-        var selectedCountryName: String
-        var selectedCountryIdentifier: String
-        var startAtLogin: Bool
-    }
-
-    func configure(_ state: MainState? = nil) {
-
-        self.state = state
-    }
-}
-
 // MARK: - Configuration
 extension MainViewController {
 
-    fileprivate func configureLocationButton(with selectedCountry: String? = nil) {
+    fileprivate func configureLocationButton(with countries: [String]? = nil, selection country: String? = nil) {
 
-        let countries = NSLocale.allCountriesLocalized
+        guard let countries = countries else { return }
         locationSelectionButton.removeAllItems()
         locationSelectionButton.addItems(withTitles: countries)
 
-        if let selectedCountry = selectedCountry {
+        if let country = country {
 
-            locationSelectionButton.selectItem(withTitle: selectedCountry)
+            locationSelectionButton.selectItem(withTitle: country)
         }
     }
 
@@ -102,7 +93,19 @@ extension MainViewController {
             return
         }
 
-        state?.selectedCountryName = button.titleOfSelectedItem ?? ""
+//        store?.state.countryName = button.titleOfSelectedItem ?? ""
+    }
+}
+
+extension MainViewController: StoreSubscriber {
+
+    func newState(state: AppState) {
+
+        print("newState MainVC store")
+        configureLocationButton(with: store?.state.allCountries, selection: store?.state.countryName)
+        configureStartAtLoginButton(with: store?.state.startAtLogin)
+
+        selectionViewController?.store = store
     }
 }
 

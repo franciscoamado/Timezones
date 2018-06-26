@@ -1,16 +1,16 @@
 PODS:
-  - TinyConstraints (3.1.1)
+  - ReSwift (4.0.1)
 
 DEPENDENCIES:
-  - TinyConstraints
+  - ReSwift (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - TinyConstraints
+    - ReSwift
 
 SPEC CHECKSUMS:
-  TinyConstraints: c15ce864e9ef87dfd18ee3bd746d510a38d84198
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
 
-PODFILE CHECKSUM: 13951c518d9a4b31a3c4b96b026b3cb436c71bce
+PODFILE CHECKSUM: 6522ad700c50d814949f8541b058bc66277f69f8
 
 COCOAPODS: 1.5.3

@@ -11,15 +11,16 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    fileprivate var appCoordinator: AppCoordinator?
+    fileprivate var appCoordinator: AppCoordinator!
+    fileprivate let appStore = AppStore(reducer: appReducer, state: nil)
     fileprivate let popover = NSPopover()
     fileprivate let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     fileprivate var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-        self.appCoordinator = AppCoordinator()
+
+        self.appCoordinator = AppCoordinator(store: appStore)
 
         self.configureStatusItem()
         self.configurePopOver()
