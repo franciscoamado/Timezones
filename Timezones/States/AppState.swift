@@ -11,7 +11,7 @@ import ReSwift
 
 struct TimezoneState: StateType {
 
-    var timezones: [String] = []
+    var timezones: [TimeZone] = []
 }
 
 struct AppState: StateType {
@@ -20,6 +20,6 @@ struct AppState: StateType {
     var countryName: String? = nil // "Portugal",
     var countryIdentifier: String? = nil // "PT",
     var allCountries: [String] = []
-    var allTimezones: [String] = []
+    var allTimezones: [TimeZone] = []
     var timezoneState: TimezoneState = .init()
 }

@@ -70,10 +70,8 @@ extension AppCoordinator {
 
     fileprivate func fetchAllTimezones() {
 
-        let allTimeZones = TimeZone.all.compactMap { timezone -> String in
-
-            return timezone.formatted
-        }
+        let allTimeZones: [TimeZone] = TimeZone.all
+            .sorted { $0.secondsFromGMT() < $1.secondsFromGMT() }
 
         store.dispatch(AppAction.fetchedAllTimezones(timezones: allTimeZones))
     }

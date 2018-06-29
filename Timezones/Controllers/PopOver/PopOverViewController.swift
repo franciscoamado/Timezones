@@ -45,16 +45,38 @@ protocol PopOverItem {
 // MARK: - Configuration
 extension PopOverViewController {
 
-    fileprivate func configure(list: [String]?) {
+    fileprivate func configure(list: [TimeZone]?) {
 
         guard let list = list, list.count > 0 else { return }
 
-        print(stackView.arrangedSubviews)
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
-        for _ in list {
+        for timezone in list {
 
             if let infoView = TimezoneInfoView.instantiate() {
+
+
+                let abbreviation = timezone.abbreviation(for: Date())
+                var identifier = timezone.identifier
+                    .components(separatedBy: "/").last?
+                    .replacingOccurrences(of: "_", with: " ")
+
+                if let localizedName = timezone.localizedName(for: .shortGeneric, locale: Locale.current) {
+
+                    identifier?.append(" (\(localizedName))")
+                }
+
+                infoView.render(with:
+                    .init(
+                        title: identifier,
+                        subtitle: "00H00 (+1)",
+                        caption: abbreviation
+                    )
+                )
+                
                 stackView.addArrangedSubview(infoView)
+                infoView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
+                infoView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
             }
         }
     }

@@ -10,6 +10,11 @@ import Foundation
 
 extension TimeZone {
 
+    static var GMT: TimeZone? {
+
+        return self.all.filter { $0.identifier == "GMT" }.first
+    }
+
     var formatted: String {
 
         let date = Date()
@@ -27,8 +32,6 @@ extension TimeZone {
 
     static var all: [TimeZone] {
 
-        return abbreviationDictionary.compactMap {
-            return TimeZone(abbreviation: $0.key)
-        }
+        return TimeZone.knownTimeZoneIdentifiers.compactMap { TimeZone(identifier: $0) }
     }
 }

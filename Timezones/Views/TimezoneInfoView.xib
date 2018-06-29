@@ -61,6 +61,7 @@
                         <constraint firstItem="KO0-RU-JHq" firstAttribute="leading" secondItem="OrK-Hf-T3u" secondAttribute="leading" constant="20" id="Oei-EX-i3M"/>
                         <constraint firstItem="bwf-nk-1WU" firstAttribute="top" secondItem="OrK-Hf-T3u" secondAttribute="top" constant="20" id="SrY-WR-33D"/>
                         <constraint firstItem="KO0-RU-JHq" firstAttribute="top" secondItem="bwf-nk-1WU" secondAttribute="bottom" constant="4" id="WGs-WG-AId"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bwf-nk-1WU" secondAttribute="trailing" constant="20" id="bN0-sH-AHZ"/>
                         <constraint firstItem="bwf-nk-1WU" firstAttribute="leading" secondItem="OrK-Hf-T3u" secondAttribute="leading" constant="20" id="m7D-Kt-RuM"/>
                     </constraints>
                 </customView>
@@ -71,6 +72,11 @@
                 <constraint firstAttribute="bottom" secondItem="OrK-Hf-T3u" secondAttribute="bottom" id="W8B-Tg-DpJ"/>
                 <constraint firstAttribute="trailing" secondItem="OrK-Hf-T3u" secondAttribute="trailing" id="rkG-eZ-nGo"/>
             </constraints>
+            <connections>
+                <outlet property="caption" destination="bwf-nk-1WU" id="IDV-5E-8Us"/>
+                <outlet property="subtitle" destination="dc4-tF-Ahm" id="wgK-FP-TMr"/>
+                <outlet property="title" destination="CdB-1S-x2b" id="Iil-kl-wSF"/>
+            </connections>
         </customView>
     </objects>
 </document>

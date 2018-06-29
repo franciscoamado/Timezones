@@ -12,10 +12,10 @@ import ReSwift
 enum AppAction: Action {
 
     case fetchedAllCountries(countries: [String])
-    case fetchedAllTimezones(timezones: [String])
-    case addedSelection(timezone: String)
+    case fetchedAllTimezones(timezones: [TimeZone])
+    case addedSelection(timezone: TimeZone)
     case removedSelection()
-    case selected(index: Int, timezone: String)
+    case selected(index: Int, timezone: TimeZone)
 }
 
 func appReducer(action: Action, state: AppState?) -> AppState {
@@ -33,16 +33,10 @@ func appReducer(action: Action, state: AppState?) -> AppState {
         state.allCountries = countries
 
     case .fetchedAllTimezones(let timezones):
-
-        let values: [String] = timezones.filter { timezone in
-            state.timezoneState.timezones.contains(where: { $0 == timezone }) == false
-        }
-
-        state.allTimezones.append(contentsOf: values)
+        state.allTimezones = timezones
 
     case .addedSelection(let timezone):
-        let values = state.timezoneState.timezones + [timezone]
-        state.timezoneState.timezones = values
+        state.timezoneState.timezones.append(timezone)
 
     case .removedSelection():
         state.timezoneState.timezones.removeLast()

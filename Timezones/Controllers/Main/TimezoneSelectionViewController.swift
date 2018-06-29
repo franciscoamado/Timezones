@@ -29,27 +29,48 @@ class TimezoneSelectionViewController: NSViewController, NibLoadable {
         store?.unsubscribe(self)
     }
 
-    func renderItems(with timezones: [String]?) {
+    func renderItems(with timezones: [TimeZone]?) {
 
         guard let timezones = timezones, timezones.count > 0 else {
 
             stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-            store?.dispatch(AppAction.addedSelection(timezone: "GMT"))
+
+            if let defaultTimeZone = TimeZone.GMT {
+
+                store?.dispatch(AppAction.addedSelection(timezone: defaultTimeZone))
+            }
             return
         }
 
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        timezones.forEach { self.addNewSelection(timezone: $0) }
+        for (index, timezone) in timezones.enumerated() {
+            self.addNewSelection(timezone: timezone, with: index)
+        }
     }
 
-    func addNewSelection(timezone: String? = nil) {
+    func addNewSelection(timezone: TimeZone? = nil, with index: Int) {
 
-        let selectionButton = TimezoneSelectionButton()
+        guard let allTimezones = store?.state.allTimezones else {
 
-        selectionButton.removeAllItems()
-        selectionButton.addItems(withTitles: store?.state.allTimezones ?? [])
+            return
+        }
+
+        let selectionButton = TimezonePopUpButton(timezones: allTimezones, selected: timezone)
+        selectionButton.delegate = self
+        selectionButton.tag = index
+        
         stackView.addArrangedSubview(selectionButton)
         selectionButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor).isActive = true
+    }
+}
+
+extension TimezoneSelectionViewController: TimezonePopUpButtonDelegate {
+
+    func didFinishSelection(button: TimezonePopUpButton, selected: TimeZone?) {
+
+        guard let selected = selected else { return }
+        print(selected.formatted)
+        store?.dispatch(AppAction.selected(index: button.tag, timezone: selected))
     }
 }
 
@@ -58,7 +79,16 @@ extension TimezoneSelectionViewController {
 
     @IBAction func addTimezone(_ sender: Any) {
 
-        store?.dispatch(AppAction.addedSelection(timezone: "GMT"))
+        guard stackView.arrangedSubviews.count < 10 else {
+
+            NSSound.beep()
+            return
+        }
+
+        if let defaultTimezone = TimeZone.GMT {
+
+            store?.dispatch(AppAction.addedSelection(timezone: defaultTimezone))
+        }
     }
 
     @IBAction func removeTimezone(_ sender: Any) {
@@ -77,7 +107,6 @@ extension TimezoneSelectionViewController: StoreSubscriber {
 
     func newState(state: AppState) {
 
-        print("\(#file) newState")
         renderItems(with: store?.state.timezoneState.timezones)
     }
 }
