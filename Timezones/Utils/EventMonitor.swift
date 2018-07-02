@@ -20,13 +20,16 @@ public class EventMonitor {
         self.handler = handler
     }
 
-    deinit { stop() }
+    deinit {
+
+        stop()
+    }
 
     func start() {
 
-        self.monitor = NSEvent.addGlobalMonitorForEvents(
-            matching: self.mask,
-            handler: self.handler
+        monitor = NSEvent.addGlobalMonitorForEvents(
+            matching: mask,
+            handler: handler
         )
     }
 

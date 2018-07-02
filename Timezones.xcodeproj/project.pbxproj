@@ -24,6 +24,7 @@
 		6B9F8DA220D1D44900024495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9F8DA020D1D44900024495 /* Main.storyboard */; };
 		6BBB2C4620E04117007044A7 /* Locale+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBB2C4520E04117007044A7 /* Locale+Utils.swift */; };
 		6BBB2C4820E042E2007044A7 /* TimeZone+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBB2C4720E042E2007044A7 /* TimeZone+Utils.swift */; };
+		6BC3D16020EAAF8400D9F48E /* AppDelegate+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC3D15F20EAAF8400D9F48E /* AppDelegate+Configuration.swift */; };
 		6BE3A2D120D5A0B500ACEBC6 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3A2D020D5A0B500ACEBC6 /* EventMonitor.swift */; };
 		6BE3A2D420D5A1E800ACEBC6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3A2D320D5A1E800ACEBC6 /* AppCoordinator.swift */; };
 		6BE3A2D620D5A30A00ACEBC6 /* PopOverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3A2D520D5A30A00ACEBC6 /* PopOverCoordinator.swift */; };
@@ -59,6 +60,7 @@
 		6B9F8DA420D1D44900024495 /* Timezones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timezones.entitlements; sourceTree = "<group>"; };
 		6BBB2C4520E04117007044A7 /* Locale+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Utils.swift"; sourceTree = "<group>"; };
 		6BBB2C4720E042E2007044A7 /* TimeZone+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Utils.swift"; sourceTree = "<group>"; };
+		6BC3D15F20EAAF8400D9F48E /* AppDelegate+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Configuration.swift"; sourceTree = "<group>"; };
 		6BE3A2D020D5A0B500ACEBC6 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		6BE3A2D320D5A1E800ACEBC6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6BE3A2D520D5A30A00ACEBC6 /* PopOverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverCoordinator.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6B9F8D9A20D1D44800024495 /* AppDelegate.swift */,
+				6BC3D15F20EAAF8400D9F48E /* AppDelegate+Configuration.swift */,
 				6BE3A2D820D6818700ACEBC6 /* Controllers */,
 				6BE3A2D720D6817C00ACEBC6 /* Coordinators */,
 				6B4D56DF20E1BD5900D9C840 /* Reducers */,
@@ -384,6 +387,7 @@
 				6B4D56E220E1BD8600D9C840 /* AppState.swift in Sources */,
 				6B4D56E620E1BDF600D9C840 /* AppStore.swift in Sources */,
 				6BE5D33020DE9C9400E96DA4 /* TimezoneInfoView.swift in Sources */,
+				6BC3D16020EAAF8400D9F48E /* AppDelegate+Configuration.swift in Sources */,
 				6BE3A2D420D5A1E800ACEBC6 /* AppCoordinator.swift in Sources */,
 				6B3CBFE220D72DEC00C8AB20 /* MainViewController.swift in Sources */,
 				6B4D56DD20E1B9BA00D9C840 /* Collection+Utils.swift in Sources */,

@@ -12,7 +12,7 @@ extension TimeZone {
 
     static var GMT: TimeZone? {
 
-        return self.all.filter { $0.identifier == "GMT" }.first
+        return all.filter { $0.identifier == "GMT" }.first
     }
 
     var formatted: String {

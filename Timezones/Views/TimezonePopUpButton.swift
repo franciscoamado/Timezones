@@ -36,10 +36,9 @@ class TimezonePopUpButton: NSPopUpButton {
     }
 
     override func didCloseMenu(_ menu: NSMenu, with event: NSEvent?) {
+
         super.didCloseMenu(menu, with: event)
 
-        print("didCloseMenu")
-        print(titleOfSelectedItem)
         synchronizeTitleAndSelectedItem()
         let timezone = timezones.filter { $0.formatted == titleOfSelectedItem }.first
         delegate?.didFinishSelection(button: self, selected: timezone)

@@ -16,15 +16,18 @@ class TimezoneSelectionViewController: NSViewController, NibLoadable {
     var store: AppStore?
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
     }
 
     override func viewWillAppear() {
+
         super.viewWillAppear()
         store?.subscribe(self)
     }
 
     override func viewWillDisappear() {
+
         super.viewWillDisappear()
         store?.unsubscribe(self)
     }
@@ -44,16 +47,13 @@ class TimezoneSelectionViewController: NSViewController, NibLoadable {
 
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         for (index, timezone) in timezones.enumerated() {
-            self.addNewSelection(timezone: timezone, with: index)
+            addNewSelection(timezone: timezone, with: index)
         }
     }
 
     func addNewSelection(timezone: TimeZone? = nil, with index: Int) {
 
-        guard let allTimezones = store?.state.allTimezones else {
-
-            return
-        }
+        guard let allTimezones = store?.state.allTimezones else { return }
 
         let selectionButton = TimezonePopUpButton(timezones: allTimezones, selected: timezone)
         selectionButton.delegate = self
@@ -69,7 +69,7 @@ extension TimezoneSelectionViewController: TimezonePopUpButtonDelegate {
     func didFinishSelection(button: TimezonePopUpButton, selected: TimeZone?) {
 
         guard let selected = selected else { return }
-        print(selected.formatted)
+
         store?.dispatch(AppAction.selected(index: button.tag, timezone: selected))
     }
 }

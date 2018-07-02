@@ -12,8 +12,7 @@ extension NSLocale {
 
     class var allCountriesIdentifiers: [String] {
 
-        let locale = NSLocale.current
-        let countries = NSLocale.isoCountryCodes.compactMap { locale.localizedString(forRegionCode: $0) }
+        let countries = NSLocale.isoCountryCodes.compactMap { $0 }
 
         return countries.sorted()
     }

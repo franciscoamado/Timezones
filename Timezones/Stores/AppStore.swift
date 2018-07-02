@@ -9,5 +9,4 @@
 import Foundation
 import ReSwift
 
-// AppStore.swift
 typealias AppStore = Store<AppState>

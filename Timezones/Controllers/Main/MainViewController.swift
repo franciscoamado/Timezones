@@ -18,19 +18,22 @@ class MainViewController: NSViewController {
 
     var selectionViewController: TimezoneSelectionViewController? {
 
-        return children.flatMap { $0 as? TimezoneSelectionViewController }.first
+        return children.compactMap { $0 as? TimezoneSelectionViewController }.first
     }
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
     }
 
     override func viewWillAppear() {
+
         super.viewWillAppear()
         store?.subscribe(self)
     }
 
     override func viewWillDisappear() {
+
         super.viewWillDisappear()
         store?.unsubscribe(self)
     }
@@ -48,6 +51,7 @@ extension MainViewController {
     fileprivate func configureLocationButton(with countries: [String]? = nil, selection country: String? = nil) {
 
         guard let countries = countries else { return }
+
         locationSelectionButton.removeAllItems()
         locationSelectionButton.addItems(withTitles: countries)
 
@@ -93,7 +97,7 @@ extension MainViewController {
             return
         }
 
-//        store?.state.countryName = button.titleOfSelectedItem ?? ""
+        print("changeLocation \(button.selectedItem)")
     }
 }
 
@@ -101,7 +105,6 @@ extension MainViewController: StoreSubscriber {
 
     func newState(state: AppState) {
 
-        print("newState MainVC store")
         configureLocationButton(with: store?.state.allCountries, selection: store?.state.countryName)
         configureStartAtLoginButton(with: store?.state.startAtLogin)
 

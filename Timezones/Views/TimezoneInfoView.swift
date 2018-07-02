@@ -22,6 +22,7 @@ class TimezoneInfoView: NSView, NibLoadable {
     @IBOutlet weak var caption: NSTextField!
 
     override func draw(_ dirtyRect: NSRect) {
+
         super.draw(dirtyRect)
 
         // Drawing code here.

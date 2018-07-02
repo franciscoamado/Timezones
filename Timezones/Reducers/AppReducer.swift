@@ -22,10 +22,7 @@ func appReducer(action: Action, state: AppState?) -> AppState {
 
     var state = state ?? AppState()
 
-    guard let action = action as? AppAction else {
-
-        return state
-    }
+    guard let action = action as? AppAction else { return state }
 
     switch action {
         

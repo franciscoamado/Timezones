@@ -88,7 +88,7 @@ extension AppCoordinator: PopOverCoordinatorDelegate {
 
     func selectSettings() {
 
-        self.openMainWindow()
+        openMainWindow()
     }
 }
 
@@ -96,7 +96,6 @@ extension AppCoordinator: StoreSubscriber {
 
     func newState(state: AppState) {
 
-        print("NEW STATE")
         popOverCoordinator.state = state.timezoneState
     }
 }

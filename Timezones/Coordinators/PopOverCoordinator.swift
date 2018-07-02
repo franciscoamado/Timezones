@@ -22,7 +22,6 @@ class PopOverCoordinator {
 
     var state: TimezoneState {
         didSet {
-            print("UPDATED POPOVERCOORDINATOR TIMEZONESTATE")
             viewController?.state = state
         }
     }
