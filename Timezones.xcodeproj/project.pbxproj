@@ -83,6 +83,7 @@
 		6B3CBFE320D72E6F00C8AB20 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6B9F8D9E20D1D44900024495 /* Assets.xcassets */,
 				6B3CBFE420D72E7800C8AB20 /* Localization */,
 			);
 			path = Resources;
@@ -158,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				6B9F8D9A20D1D44800024495 /* AppDelegate.swift */,
-				6B9F8D9E20D1D44900024495 /* Assets.xcassets */,
 				6BE3A2D820D6818700ACEBC6 /* Controllers */,
 				6BE3A2D720D6817C00ACEBC6 /* Coordinators */,
 				6B4D56DF20E1BD5900D9C840 /* Reducers */,
