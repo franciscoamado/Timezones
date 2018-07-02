@@ -51,26 +51,41 @@ extension PopOverViewController {
 
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
 
+        let date = Date()
+
         for timezone in list {
 
             if let infoView = TimezoneInfoView.instantiate() {
 
-
-                let abbreviation = timezone.abbreviation(for: Date())
-                var identifier = timezone.identifier
+                let abbreviation = timezone.abbreviation(for: date)
+                let identifier = timezone.identifier
                     .components(separatedBy: "/").last?
                     .replacingOccurrences(of: "_", with: " ")
 
+                var caption: String?
                 if let localizedName = timezone.localizedName(for: .shortGeneric, locale: Locale.current) {
 
-                    identifier?.append(" (\(localizedName))")
+                    caption = localizedName
+                }
+
+                // Subtitle (00:00 (GMT+1))
+                var calendar = Calendar.current
+                calendar.timeZone = timezone
+
+                let hour = calendar.component(.hour, from: date)
+                let minutes = calendar.component(.minute, from: date)
+
+                var subtitle: String = "\(hour):\(minutes)"
+
+                if let abbreviation = abbreviation {
+                    subtitle.append(" (\(abbreviation))")
                 }
 
                 infoView.render(with:
                     .init(
                         title: identifier,
-                        subtitle: "00H00 (+1)",
-                        caption: abbreviation
+                        subtitle: subtitle,
+                        caption: caption
                     )
                 )
                 
