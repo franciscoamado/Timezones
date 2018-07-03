@@ -34,10 +34,20 @@
                                 <action selector="selectSettings:" target="-2" id="ske-YK-IlB"/>
                             </connections>
                         </button>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5SJ-2j-gAr">
+                            <rect key="frame" x="203" y="11" width="75" height="18"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Timezones" id="gm3-Vf-mIc">
+                                <font key="font" metaFont="system" size="14"/>
+                                <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Cqb-Ly-MdI"/>
                         <constraint firstItem="Ey0-VW-fkY" firstAttribute="centerY" secondItem="R2L-Rh-KEy" secondAttribute="centerY" id="Ew1-0t-4Gb"/>
+                        <constraint firstItem="5SJ-2j-gAr" firstAttribute="centerX" secondItem="R2L-Rh-KEy" secondAttribute="centerX" id="IOQ-jw-cCI"/>
+                        <constraint firstItem="5SJ-2j-gAr" firstAttribute="centerY" secondItem="R2L-Rh-KEy" secondAttribute="centerY" id="Us6-tw-F7n"/>
                         <constraint firstItem="Ey0-VW-fkY" firstAttribute="leading" secondItem="R2L-Rh-KEy" secondAttribute="leading" constant="20" id="v0D-gn-mo3"/>
                     </constraints>
                 </customView>

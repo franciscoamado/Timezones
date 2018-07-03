@@ -13,6 +13,7 @@ enum AppAction: Action {
 
     case fetchedAllCountries(countries: [String])
     case fetchedAllTimezones(timezones: [TimeZone])
+    case fetchedSavedTimezones(timezones: [TimeZone])
     case addedSelection(timezone: TimeZone)
     case removedSelection()
     case selected(index: Int, timezone: TimeZone)
@@ -31,6 +32,9 @@ func appReducer(action: Action, state: AppState?) -> AppState {
 
     case .fetchedAllTimezones(let timezones):
         state.allTimezones = timezones
+
+    case .fetchedSavedTimezones(let timezones):
+        state.timezoneState.timezones = timezones
 
     case .addedSelection(let timezone):
         state.timezoneState.timezones.append(timezone)

@@ -30,6 +30,7 @@ class AppCoordinator {
         self.store.subscribe(self)
         self.fetchAllCountries()
         self.fetchAllTimezones()
+        self.fetchSavedTimezones()
     }
 
     private var mainWindowController: MainWindowController?
@@ -47,7 +48,7 @@ class AppCoordinator {
 
             if isRetry == false {
 
-                self.openMainWindow(isRetry: true)
+                openMainWindow(isRetry: true)
             }
 
             return
@@ -82,6 +83,13 @@ extension AppCoordinator {
 
         store.dispatch(AppAction.fetchedAllCountries(countries: allCountries))
     }
+
+    fileprivate func fetchSavedTimezones() {
+
+        let timezones = userDefaults.timezones()
+
+        store.dispatch(AppAction.fetchedSavedTimezones(timezones: timezones))
+    }
 }
 
 extension AppCoordinator: PopOverCoordinatorDelegate {
@@ -95,6 +103,11 @@ extension AppCoordinator: PopOverCoordinatorDelegate {
 extension AppCoordinator: StoreSubscriber {
 
     func newState(state: AppState) {
+
+        if state.timezoneState.timezones.count > 0 {
+
+            userDefaults.save(state.timezoneState.timezones)
+        }
 
         popOverCoordinator.state = state.timezoneState
     }

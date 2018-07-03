@@ -17,6 +17,7 @@
 		6B4D56E220E1BD8600D9C840 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E120E1BD8600D9C840 /* AppState.swift */; };
 		6B4D56E420E1BDBE00D9C840 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E320E1BDBE00D9C840 /* AppReducer.swift */; };
 		6B4D56E620E1BDF600D9C840 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D56E520E1BDF600D9C840 /* AppStore.swift */; };
+		6B6DB2C920EBA40E00D56ED2 /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6DB2C820EBA40E00D56ED2 /* UserDefaults+Utils.swift */; };
 		6B9859CE20D4762B00CA37CD /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9859CC20D4762B00CA37CD /* PopOverViewController.swift */; };
 		6B9859CF20D4762B00CA37CD /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9859CD20D4762B00CA37CD /* PopOverViewController.xib */; };
 		6B9F8D9B20D1D44800024495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9F8D9A20D1D44800024495 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		6B4D56E120E1BD8600D9C840 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		6B4D56E320E1BDBE00D9C840 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		6B4D56E520E1BDF600D9C840 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		6B6DB2C820EBA40E00D56ED2 /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
 		6B9859CC20D4762B00CA37CD /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		6B9859CD20D4762B00CA37CD /* PopOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopOverViewController.xib; sourceTree = "<group>"; };
 		6B9F8D9720D1D44800024495 /* Timezones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timezones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +112,10 @@
 		6B4D56DB20E1B99200D9C840 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				6B6DB2C820EBA40E00D56ED2 /* UserDefaults+Utils.swift */,
 				6B4D56DC20E1B9BA00D9C840 /* Collection+Utils.swift */,
+				6BBB2C4520E04117007044A7 /* Locale+Utils.swift */,
+				6BBB2C4720E042E2007044A7 /* TimeZone+Utils.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -200,8 +205,6 @@
 				6B4D56DB20E1B99200D9C840 /* Foundation */,
 				6B4D56D620E1B29900D9C840 /* Protocols */,
 				6BE3A2D020D5A0B500ACEBC6 /* EventMonitor.swift */,
-				6BBB2C4520E04117007044A7 /* Locale+Utils.swift */,
-				6BBB2C4720E042E2007044A7 /* TimeZone+Utils.swift */,
 				6B4D56D420E1B18F00D9C840 /* NSView+Utils.swift */,
 				6B4D56D920E1B2D900D9C840 /* NSViewController+Utils.swift */,
 			);
@@ -396,6 +399,7 @@
 				6B4D56D820E1B2AA00D9C840 /* NibLoadable.swift in Sources */,
 				6B9859CE20D4762B00CA37CD /* PopOverViewController.swift in Sources */,
 				6BE5D33920DEA08700E96DA4 /* TimezoneSelectionViewController.swift in Sources */,
+				6B6DB2C920EBA40E00D56ED2 /* UserDefaults+Utils.swift in Sources */,
 				6BBB2C4820E042E2007044A7 /* TimeZone+Utils.swift in Sources */,
 				6BE3A2D120D5A0B500ACEBC6 /* EventMonitor.swift in Sources */,
 			);
