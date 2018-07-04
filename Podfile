@@ -7,5 +7,6 @@ target 'Timezones' do
 
   # Pods for Timezones
   pod 'ReSwift', '~> 4.0.0'
+  pod 'LaunchAtLogin'
 
 end

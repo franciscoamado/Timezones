@@ -89,20 +89,20 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Timezones" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="374"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="200"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="OBQ-6O-SbL" userLabel="Menu View">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="374"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
                                 <subviews>
                                     <stackView focusRingType="none" distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uem-cZ-s8J">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="374"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="jDM-kY-Syz">
-                                                <rect key="frame" x="0.0" y="276" width="360" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
                                                 <subviews>
                                                     <button horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rYK-ed-ig5">
-                                                        <rect key="frame" x="14" y="62" width="199" height="18"/>
+                                                        <rect key="frame" x="14" y="164" width="199" height="18"/>
                                                         <buttonCell key="cell" type="check" title="Start Timezones at Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qek-q7-oOS">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -111,16 +111,8 @@
                                                             <action selector="didSelectStartAtLogin:" target="XfG-lQ-9wD" id="AHx-lR-St1"/>
                                                         </connections>
                                                     </button>
-                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Lhn-Yb-wQn">
-                                                        <rect key="frame" x="8" y="20" width="344" height="34"/>
-                                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="If selected, Timezones will still launch at Login after using the &quot;Quit&quot; button" id="8dG-0B-uGT">
-                                                            <font key="font" metaFont="system"/>
-                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="grd-In-tN9">
-                                                        <rect key="frame" x="215" y="54" width="135" height="32"/>
+                                                        <rect key="frame" x="215" y="156" width="135" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="123" id="WUU-Ky-x7E"/>
                                                         </constraints>
@@ -132,10 +124,18 @@
                                                             <action selector="didPressQuit:" target="XfG-lQ-9wD" id="GfN-27-jvh"/>
                                                         </connections>
                                                     </button>
+                                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Lhn-Yb-wQn">
+                                                        <rect key="frame" x="8" y="122" width="344" height="34"/>
+                                                        <textFieldCell key="cell" selectable="YES" alignment="center" title="If selected, Timezones will still launch at Login after using the &quot;Quit&quot; button" id="8dG-0B-uGT">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Lhn-Yb-wQn" firstAttribute="leading" secondItem="jDM-kY-Syz" secondAttribute="leading" constant="10" id="DS7-kF-R68"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Lhn-Yb-wQn" secondAttribute="bottom" constant="20" id="Dna-Jk-kyX"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lhn-Yb-wQn" secondAttribute="bottom" constant="20" id="Dna-Jk-kyX"/>
                                                     <constraint firstItem="rYK-ed-ig5" firstAttribute="top" secondItem="jDM-kY-Syz" secondAttribute="top" constant="20" id="MFX-h8-mrS"/>
                                                     <constraint firstItem="grd-In-tN9" firstAttribute="centerY" secondItem="rYK-ed-ig5" secondAttribute="centerY" id="MQR-3Q-t7b"/>
                                                     <constraint firstItem="rYK-ed-ig5" firstAttribute="leading" secondItem="jDM-kY-Syz" secondAttribute="leading" constant="16" id="ZVC-Uj-6zW"/>
@@ -145,62 +145,16 @@
                                                     <constraint firstAttribute="trailing" secondItem="Lhn-Yb-wQn" secondAttribute="trailing" constant="10" id="ttC-Fg-0rR"/>
                                                 </constraints>
                                             </customView>
-                                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NM3-KR-xy3">
-                                                <rect key="frame" x="0.0" y="0.0" width="360" height="276"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-DS-bhc">
-                                                        <rect key="frame" x="14" y="239" width="332" height="17"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Where are you?" id="0Ak-wW-a1D">
-                                                            <font key="font" usesAppearanceFont="YES"/>
-                                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dN3-yK-3Ft">
-                                                        <rect key="frame" x="14" y="195" width="333" height="26"/>
-                                                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="esl-u7-MLe" id="tHD-7B-MDP">
-                                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
-                                                            <menu key="menu" id="FHp-gh-n3t">
-                                                                <items>
-                                                                    <menuItem title="Item 1" state="on" id="esl-u7-MLe"/>
-                                                                    <menuItem title="Item 2" id="WvA-hi-R8f"/>
-                                                                    <menuItem title="Item 3" id="4XQ-4x-YTu"/>
-                                                                </items>
-                                                            </menu>
-                                                        </popUpButtonCell>
-                                                        <connections>
-                                                            <action selector="didChangeLocation:" target="XfG-lQ-9wD" id="NTH-Nv-6t1"/>
-                                                        </connections>
-                                                    </popUpButton>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="y9b-DS-bhc" firstAttribute="leading" secondItem="NM3-KR-xy3" secondAttribute="leading" constant="16" id="BZg-OK-Fae"/>
-                                                    <constraint firstItem="dN3-yK-3Ft" firstAttribute="leading" secondItem="NM3-KR-xy3" secondAttribute="leading" constant="16" id="FDp-LF-Cgw"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dN3-yK-3Ft" secondAttribute="trailing" constant="16" id="FJV-ud-6yA"/>
-                                                    <constraint firstItem="dN3-yK-3Ft" firstAttribute="top" secondItem="y9b-DS-bhc" secondAttribute="bottom" constant="20" id="GPe-t6-Xqt"/>
-                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dN3-yK-3Ft" secondAttribute="bottom" constant="20" id="WGB-M7-WUe"/>
-                                                    <constraint firstAttribute="trailing" secondItem="y9b-DS-bhc" secondAttribute="trailing" constant="16" id="ZwR-zt-xiN"/>
-                                                    <constraint firstItem="y9b-DS-bhc" firstAttribute="top" secondItem="NM3-KR-xy3" secondAttribute="top" constant="20" id="ofb-Gm-KxQ"/>
-                                                </constraints>
-                                            </customView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="jDM-kY-Syz" secondAttribute="trailing" id="27E-40-exq"/>
-                                            <constraint firstAttribute="bottom" secondItem="NM3-KR-xy3" secondAttribute="bottom" id="BDg-AP-UZB"/>
-                                            <constraint firstAttribute="trailing" secondItem="NM3-KR-xy3" secondAttribute="trailing" id="L2a-2l-r5d"/>
-                                            <constraint firstItem="NM3-KR-xy3" firstAttribute="top" secondItem="jDM-kY-Syz" secondAttribute="bottom" id="Mhx-gJ-zbZ"/>
-                                            <constraint firstItem="NM3-KR-xy3" firstAttribute="top" secondItem="jDM-kY-Syz" secondAttribute="bottom" id="TAr-eA-LLs"/>
                                             <constraint firstItem="jDM-kY-Syz" firstAttribute="leading" secondItem="uem-cZ-s8J" secondAttribute="leading" id="Z30-nA-gLk"/>
-                                            <constraint firstItem="NM3-KR-xy3" firstAttribute="leading" secondItem="uem-cZ-s8J" secondAttribute="leading" id="djO-3D-C90"/>
                                             <constraint firstItem="jDM-kY-Syz" firstAttribute="top" secondItem="uem-cZ-s8J" secondAttribute="top" id="xcB-WT-xIh"/>
                                         </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
@@ -208,13 +162,14 @@
                                 <constraints>
                                     <constraint firstItem="uem-cZ-s8J" firstAttribute="leading" secondItem="OBQ-6O-SbL" secondAttribute="leading" id="0G3-Gy-6Th"/>
                                     <constraint firstAttribute="bottom" secondItem="uem-cZ-s8J" secondAttribute="bottom" id="HVO-ef-cGh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="YUY-0j-gkf"/>
                                     <constraint firstAttribute="trailing" secondItem="uem-cZ-s8J" secondAttribute="trailing" id="hMJ-O3-iN2"/>
                                     <constraint firstItem="uem-cZ-s8J" firstAttribute="top" secondItem="OBQ-6O-SbL" secondAttribute="top" id="kXj-Nf-NtQ"/>
                                     <constraint firstAttribute="width" constant="360" id="xwF-zV-B0w"/>
                                 </constraints>
                             </customView>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-Ex-kqy">
-                                <rect key="frame" x="360" y="0.0" width="440" height="374"/>
+                                <rect key="frame" x="360" y="0.0" width="440" height="200"/>
                                 <connections>
                                     <segue destination="4ns-59-xyr" kind="embed" id="RiA-xX-PSm"/>
                                 </connections>
@@ -231,7 +186,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="locationSelectionButton" destination="dN3-yK-3Ft" id="7c0-Mp-yGk"/>
                         <outlet property="startAtLoginButton" destination="rYK-ed-ig5" id="4mA-O0-kiY"/>
                     </connections>
                 </viewController>

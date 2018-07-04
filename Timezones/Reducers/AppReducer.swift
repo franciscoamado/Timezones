@@ -8,6 +8,7 @@
 
 import Foundation
 import ReSwift
+import LaunchAtLogin
 
 enum AppAction: Action {
 
@@ -17,6 +18,9 @@ enum AppAction: Action {
     case addedSelection(timezone: TimeZone)
     case removedSelection()
     case selected(index: Int, timezone: TimeZone)
+
+    case fetchLaunchAtLogin()
+    case launchAtLogin(option: Bool)
 }
 
 func appReducer(action: Action, state: AppState?) -> AppState {
@@ -45,6 +49,13 @@ func appReducer(action: Action, state: AppState?) -> AppState {
     case .selected(let index, let timezone):
         state.timezoneState.timezones.insert(timezone, at: index)
         state.timezoneState.timezones.remove(at: index + 1)
+
+    case .fetchLaunchAtLogin():
+        state.startAtLogin = LaunchAtLogin.isEnabled
+
+    case .launchAtLogin(let option):
+        LaunchAtLogin.isEnabled = option
+        state.startAtLogin = option
     }
 
     return state

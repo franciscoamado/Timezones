@@ -1,16 +1,20 @@
 PODS:
+  - LaunchAtLogin (2.2.0)
   - ReSwift (4.0.1)
 
 DEPENDENCIES:
+  - LaunchAtLogin
   - ReSwift (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - LaunchAtLogin
     - ReSwift
 
 SPEC CHECKSUMS:
+  LaunchAtLogin: 7901f9a3bbfe9e1ea665407d04f4c39ac46fc833
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
 
-PODFILE CHECKSUM: 6522ad700c50d814949f8541b058bc66277f69f8
+PODFILE CHECKSUM: 11a8a6eb35689e3f714a193b9b67bed9092a1450
 
 COCOAPODS: 1.5.3

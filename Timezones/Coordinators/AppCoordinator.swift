@@ -8,6 +8,7 @@
 
 import Cocoa
 import ReSwift
+import LaunchAtLogin
 
 class AppCoordinator {
 
@@ -31,6 +32,7 @@ class AppCoordinator {
         self.fetchAllCountries()
         self.fetchAllTimezones()
         self.fetchSavedTimezones()
+        self.fetchLaunchAtLogin()
     }
 
     private var mainWindowController: MainWindowController?
@@ -89,6 +91,11 @@ extension AppCoordinator {
         let timezones = userDefaults.timezones()
 
         store.dispatch(AppAction.fetchedSavedTimezones(timezones: timezones))
+    }
+
+    fileprivate func fetchLaunchAtLogin() {
+
+        store.dispatch(AppAction.fetchLaunchAtLogin())
     }
 }
 

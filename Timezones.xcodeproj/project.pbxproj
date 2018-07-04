@@ -278,6 +278,7 @@
 				6B9F8D9420D1D44800024495 /* Frameworks */,
 				6B9F8D9520D1D44800024495 /* Resources */,
 				4281D96BEE61B242D4F732BD /* [CP] Embed Pods Frameworks */,
+				6BFCF20C20ECBED100D3A1F9 /* Run Script (LaunchAtLogin) */,
 			);
 			buildRules = (
 			);
@@ -363,16 +364,36 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Timezones/Pods-Timezones-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LaunchAtLogin/LaunchAtLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LaunchAtLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Timezones/Pods-Timezones-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6BFCF20C20ECBED100D3A1F9 /* Run Script (LaunchAtLogin) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script (LaunchAtLogin)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/LaunchAtLogin/LaunchAtLogin/copy-helper.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

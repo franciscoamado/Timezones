@@ -11,7 +11,6 @@ import ReSwift
 
 class MainViewController: NSViewController {
 
-    @IBOutlet weak var locationSelectionButton: NSPopUpButton!
     @IBOutlet weak var startAtLoginButton: NSButton!
     
     var store: AppStore?
@@ -48,19 +47,6 @@ class MainViewController: NSViewController {
 // MARK: - Configuration
 extension MainViewController {
 
-    fileprivate func configureLocationButton(with countries: [String]? = nil, selection country: String? = nil) {
-
-        guard let countries = countries else { return }
-
-        locationSelectionButton.removeAllItems()
-        locationSelectionButton.addItems(withTitles: countries)
-
-        if let country = country {
-
-            locationSelectionButton.selectItem(withTitle: country)
-        }
-    }
-
     fileprivate func configureStartAtLoginButton(with value: Bool? = nil) {
 
         if let value = value {
@@ -86,18 +72,7 @@ extension MainViewController {
             return
         }
 
-        print("button.state \(button.state == .on)")
-    }
-
-    @IBAction func didChangeLocation(_ sender: Any) {
-
-        guard let button = sender as? NSPopUpButton else {
-
-            assertionFailure("didChangeLocation sender isn't a NSPopUpButton")
-            return
-        }
-
-        print("changeLocation \(button.selectedItem)")
+        store?.dispatch(AppAction.launchAtLogin(option: button.state == .on))
     }
 }
 
@@ -105,7 +80,6 @@ extension MainViewController: StoreSubscriber {
 
     func newState(state: AppState) {
 
-        configureLocationButton(with: store?.state.allCountries, selection: store?.state.countryName)
         configureStartAtLoginButton(with: store?.state.startAtLogin)
 
         selectionViewController?.store = store
